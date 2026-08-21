@@ -48,7 +48,7 @@ export const homeStructuredData: JsonLd = {
       },
       image: `${SITE_URL}/images/hero-jean-porsche.jpg`,
       email: 'info@xsche.es',
-      telephone: '+34 91 990 52 85',
+      telephone: '+34647186603',
       sameAs: ['https://www.instagram.com/xsche'],
       address: [
         {

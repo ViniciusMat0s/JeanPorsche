@@ -85,7 +85,7 @@ export function ContactSection() {
     if (channel === 'whatsapp') {
       setMessage('Se abrirá WhatsApp con tu mensaje preparado.')
       const whatsappLink = document.createElement('a')
-      whatsappLink.href = `https://wa.me/34919905285?text=${encodeURIComponent(body)}`
+      whatsappLink.href = `https://wa.me/34647186603?text=${encodeURIComponent(body)}`
       whatsappLink.target = '_blank'
       whatsappLink.rel = 'noopener noreferrer'
       whatsappLink.click()

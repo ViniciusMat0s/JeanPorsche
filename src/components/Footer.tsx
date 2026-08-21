@@ -17,7 +17,7 @@ export function Footer() {
           <div>
             <p>Escríbenos</p>
             <a href="mailto:info@xsche.es">info@xsche.es</a>
-            <a href="tel:+34919905285">+34 91 990 52 85</a>
+            <a href="tel:+34647186603">+34 647 186 603</a>
           </div>
           <div>
             <p>Síguenos</p>
