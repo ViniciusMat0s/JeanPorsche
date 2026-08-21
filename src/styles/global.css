@@ -251,7 +251,6 @@ button { color: inherit; }
 .desktop-nav a { position: relative; display: flex; min-height: 44px; align-items: center; padding-block: .65rem; }
 .desktop-nav a::after { content: ''; position: absolute; right: 0; bottom: .3rem; left: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
 .desktop-nav a:hover::after { transform: scaleX(1); transform-origin: left; }
-.desktop-nav__social { margin-left: .5rem; }
 .menu-toggle { position: relative; z-index: 102; display: none; width: 48px; height: 48px; border: 0; background: none; cursor: pointer; }
 .menu-toggle span { position: absolute; left: 10px; width: 28px; height: 1px; background: currentColor; transition: transform .3s ease, top .3s ease; }
 .menu-toggle span:first-child { top: 19px; }
@@ -431,6 +430,9 @@ button { color: inherit; }
 .site-footer__grid p { margin: 0 0 .5rem; color: rgb(255 255 255 / 62%); font-size: .65rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .site-footer__grid a:not(nav a) { display: flex; min-height: 44px; align-items: center; font-size: .92rem; }
 .site-footer__grid a:hover { color: var(--sun); }
+.site-footer__grid .site-footer__social-link { display: grid; width: 48px; height: 48px; min-height: 48px; place-items: center; border: 1px solid rgb(255 255 255 / 44%); border-radius: 50%; color: var(--white); transition: background-color .3s ease, border-color .3s ease, color .3s ease, transform .3s ease; }
+.site-footer__social-link svg { width: 22px; height: 22px; }
+.site-footer__grid .site-footer__social-link:hover { border-color: var(--white); background: var(--blue-dark); color: var(--white); transform: rotate(5deg); }
 .site-footer__bottom { display: flex; justify-content: space-between; gap: var(--space-3); padding-top: var(--space-3); border-top: 1px solid rgb(255 255 255 / 24%); color: rgb(255 255 255 / 62%); font-size: .67rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
 .site-footer__bottom a { display: flex; min-height: 44px; align-items: center; color: var(--white); }
 

@@ -64,9 +64,6 @@ export function Header() {
         {navigation.map((item) => (
           <a href={item.href} key={item.href}>{item.label}</a>
         ))}
-        <a className="desktop-nav__social" href="https://www.instagram.com/xsche" target="_blank" rel="noreferrer">
-          Instagram <span aria-hidden="true">↗</span>
-        </a>
       </nav>
 
       <button
@@ -98,7 +95,6 @@ export function Header() {
         </nav>
         <div className="mobile-menu__meta">
           <a href="mailto:info@xsche.es" tabIndex={open ? 0 : -1}>info@xsche.es</a>
-          <a href="https://www.instagram.com/xsche" target="_blank" rel="noreferrer" tabIndex={open ? 0 : -1}>Instagram ↗</a>
           <span>Madrid · Menorca</span>
         </div>
       </div>
