@@ -349,6 +349,15 @@ button { color: inherit; }
 .project-card--coral .project-card__media { background: var(--coral); }
 .project-card--sun .project-card__media { background: var(--sun); }
 .project-card--blue .project-card__media { background: var(--blue); }
+.project-gallery-preview { position: fixed; z-index: 150; top: 0; left: 0; width: clamp(18rem, 24vw, 26rem); aspect-ratio: 4 / 3; pointer-events: none; transform: translate3d(-120%, -120%, 0); will-change: transform; }
+.project-gallery-preview__inner { position: absolute; overflow: hidden; inset: 0; border: 1px solid rgb(255 255 255 / 72%); background: var(--ink); box-shadow: 0 1.75rem 5rem rgb(20 19 18 / 38%); opacity: 0; transform: scale(.72) rotate(-1deg); transform-origin: center; transition: opacity .22s ease, transform .36s cubic-bezier(.4, 0, .3, 1); }
+.project-gallery-preview__inner::after { content: ''; position: absolute; z-index: 2; inset: .55rem; border: 1px solid rgb(255 220 43 / 58%); pointer-events: none; }
+.project-gallery-preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity .28s ease, transform .5s cubic-bezier(.2, .72, .2, 1); }
+.project-gallery-preview img.project-gallery-preview__image--active { opacity: 1; transform: scale(1); }
+.project-gallery-preview__progress { position: absolute; z-index: 3; right: 1rem; bottom: 1rem; left: 1rem; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .25rem; }
+.project-gallery-preview__progress span { height: 2px; background: rgb(255 255 255 / 58%); transition: background-color .2s ease, transform .2s ease; }
+.project-gallery-preview__progress span.is-active { background: var(--sun); transform: scaleY(2); }
+.project-gallery-preview--visible .project-gallery-preview__inner { opacity: 1; transform: scale(1) rotate(0); transition-duration: .28s, .5s; }
 
 /* Gallery */
 .gallery-section { padding: var(--space-7) 0; background: var(--ink); color: var(--white); }
@@ -676,6 +685,7 @@ button { color: inherit; }
 
 @media (hover: none) {
   .project-card__view { opacity: 1; transform: none; }
+  .project-gallery-preview { display: none; }
   .contact-map-preview { display: none; }
 }
 

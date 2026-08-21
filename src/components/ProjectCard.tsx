@@ -1,9 +1,23 @@
+import type { PointerEventHandler } from 'react'
 import type { Project } from '../data/site'
 
-export function ProjectCard({ project }: { project: Project }) {
+type ProjectCardProps = {
+  project: Project
+  onPointerEnter?: PointerEventHandler<HTMLAnchorElement>
+  onPointerMove?: PointerEventHandler<HTMLAnchorElement>
+  onPointerLeave?: PointerEventHandler<HTMLAnchorElement>
+}
+
+export function ProjectCard({ project, onPointerEnter, onPointerMove, onPointerLeave }: ProjectCardProps) {
   return (
     <article className={`project-card project-card--${project.tone}`} data-project-card>
-      <a href={project.href} aria-label={`Ver ${project.title}, ${project.location}`}>
+      <a
+        href={project.href}
+        aria-label={`Ver ${project.title}, ${project.location}`}
+        onPointerEnter={onPointerEnter}
+        onPointerMove={onPointerMove}
+        onPointerLeave={onPointerLeave}
+      >
         <div className="project-card__media" data-image-reveal>
           <img src={project.image} alt={project.alt} loading="lazy" width="900" height="1120" data-image-inner />
           <span className="project-card__view">Ver proyecto ↗</span>
