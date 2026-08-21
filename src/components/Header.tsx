@@ -8,7 +8,7 @@ export function Header() {
   const toggleRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 32)
+    const onScroll = () => setScrolled((current) => current ? window.scrollY > 16 : window.scrollY > 40)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -49,11 +49,16 @@ export function Header() {
   const closeMenu = () => setOpen(false)
 
   return (
-    <header className={`site-header ${scrolled || open ? 'site-header--solid' : ''}`.trim()}>
+    <header className={`site-header ${scrolled || open ? 'site-header--solid' : ''} ${scrolled ? 'site-header--logo-image' : ''}`.trim()}>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <a className="wordmark" href="/#inicio" aria-label="Jean Porsche, volver al inicio">
-        <span>Jean Porsche</span>
-        <small>Arquitectura + Interiores</small>
+        <span className="wordmark__text" aria-hidden="true">
+          <span className="wordmark__name">Jean Porsche</span>
+          <small>Arquitectura + Interiores</small>
+        </span>
+        <span className="wordmark__image" aria-hidden="true">
+          <img src="/images/logo.png" alt="" />
+        </span>
       </a>
 
       <nav className="desktop-nav" aria-label="Navegación principal">
