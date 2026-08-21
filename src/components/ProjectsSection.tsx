@@ -13,10 +13,10 @@ export function ProjectsSection() {
             intro="Una selección de proyectos residenciales, restaurantes y espacios creados para Casa Decor."
           />
         </div>
-        <div className="projects-grid">
-          {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
-        </div>
       </LayoutContainer>
+      <div className="projects-grid">
+        {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
+      </div>
     </section>
   )
 }

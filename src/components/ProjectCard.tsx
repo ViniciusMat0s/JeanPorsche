@@ -7,9 +7,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="project-card__media" data-image-reveal>
           <img src={project.image} alt={project.alt} loading="lazy" width="900" height="1120" data-image-inner />
           <span className="project-card__view">Ver proyecto ↗</span>
-        </div>
-        <div className="project-card__meta">
-          <div>
+          <div className="project-card__meta">
             <h3>{project.title}</h3>
             <p>{project.category} · {project.location}</p>
           </div>
