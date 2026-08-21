@@ -55,7 +55,6 @@ export function ContactSection() {
     <section className="contact-section" id="contacto" aria-labelledby="contact-title">
       <LayoutContainer className="contact-section__grid">
         <div className="contact-section__copy">
-          <p className="eyebrow" data-reveal>Contacto</p>
           <AnimatedText id="contact-title" text="¿Imaginamos juntos tu próximo espacio?" />
           <p data-reveal>Cuéntanos el punto de partida. El estudio responderá directamente a tu consulta.</p>
           <div className="contact-locations" data-reveal>

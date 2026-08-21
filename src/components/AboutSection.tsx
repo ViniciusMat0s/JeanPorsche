@@ -11,7 +11,6 @@ export function AboutSection() {
           <figcaption>Jean Porsche</figcaption>
         </figure>
         <div className="about-section__copy">
-          <p className="eyebrow" data-reveal>Jean Porsche</p>
           <AnimatedText id="about-title" text="Una mirada libre, culta y emocional." />
           <p className="about-section__lead" data-reveal>
             La mezcla de referencias, la intensidad cromática y el cuidado por los detalles convierten

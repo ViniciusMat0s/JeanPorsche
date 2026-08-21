@@ -7,7 +7,6 @@ export function GallerySection() {
     <section className="gallery-section" aria-labelledby="gallery-title">
       <LayoutContainer>
         <header className="gallery-section__header">
-          <p className="eyebrow" data-reveal>Atmósferas</p>
           <AnimatedText id="gallery-title" text="El espacio también se recuerda por cómo nos hace sentir." />
         </header>
         <div className="gallery-grid">

@@ -7,7 +7,7 @@ export function ProcessSection() {
     <section className="process-section" id="enfoque" aria-labelledby="process-title">
       <LayoutContainer className="process-section__layout">
         <div className="process-section__heading" id="process-title">
-          <SectionTitle eyebrow="Nuestra forma de mirar" title="Un proyecto empieza mucho antes del dibujo." />
+          <SectionTitle title="Un proyecto empieza mucho antes del dibujo." />
         </div>
         <ol className="principles-list">
           {principles.map((principle) => (

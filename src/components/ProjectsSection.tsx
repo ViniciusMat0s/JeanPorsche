@@ -9,7 +9,6 @@ export function ProjectsSection() {
       <LayoutContainer>
         <div id="projects-title">
           <SectionTitle
-            eyebrow="Proyectos seleccionados"
             title="Lugares con memoria, color y una voz propia."
             intro="Una selección de proyectos residenciales, restaurantes y espacios creados para Casa Decor."
           />

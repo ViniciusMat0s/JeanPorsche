@@ -8,7 +8,6 @@ export function IntroSection() {
     <section className="intro-section" id="estudio" aria-labelledby="intro-title">
       <LayoutContainer className="intro-section__grid">
         <div className="intro-section__copy">
-          <p className="eyebrow" data-reveal>El estudio</p>
           <AnimatedText id="intro-title" text="Espacios con carácter, pensados para ser vividos." />
           <ScrollReveal>
             <p className="intro-section__lead">
