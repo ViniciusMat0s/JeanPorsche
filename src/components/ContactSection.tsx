@@ -1,4 +1,4 @@
-import { type FormEvent, useState } from 'react'
+import { type FormEvent, type PointerEvent, useEffect, useRef, useState } from 'react'
 import { AnimatedText } from './AnimatedText'
 import { LayoutContainer } from './LayoutContainer'
 
@@ -20,6 +20,37 @@ const studios = [
 export function ContactSection() {
   const [message, setMessage] = useState('')
   const [channel, setChannel] = useState<ContactChannel>('email')
+  const [activeStudio, setActiveStudio] = useState<(typeof studios)[number] | null>(null)
+  const mapPreviewRef = useRef<HTMLDivElement>(null)
+  const pointerPosition = useRef({ x: 0, y: 0 })
+  const pointerFrame = useRef<number | null>(null)
+
+  useEffect(() => () => {
+    if (pointerFrame.current !== null) window.cancelAnimationFrame(pointerFrame.current)
+  }, [])
+
+  const moveMapPreview = (x: number, y: number) => {
+    pointerPosition.current = { x, y }
+    if (pointerFrame.current !== null) return
+
+    pointerFrame.current = window.requestAnimationFrame(() => {
+      const preview = mapPreviewRef.current
+      if (preview) {
+        const size = preview.offsetWidth
+        const safeEdge = size / 2 + 16
+        const safeX = Math.min(window.innerWidth - safeEdge, Math.max(safeEdge, pointerPosition.current.x))
+        const safeY = Math.min(window.innerHeight - safeEdge, Math.max(safeEdge, pointerPosition.current.y))
+        preview.style.transform = `translate3d(${safeX - size / 2}px, ${safeY - size / 2}px, 0)`
+      }
+      pointerFrame.current = null
+    })
+  }
+
+  const showMapPreview = (studio: (typeof studios)[number], event: PointerEvent<HTMLAnchorElement>) => {
+    if (event.pointerType === 'touch') return
+    setActiveStudio(studio)
+    moveMapPreview(event.clientX, event.clientY)
+  }
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -63,43 +94,49 @@ export function ContactSection() {
               const mapLink = `https://www.google.com/maps/search/?api=1&query=${query}`
 
               return (
-                <article className="studio-map" key={studio.city}>
-                  <div className="studio-map__viewport">
-                    <iframe
-                      title={`Mapa del estudio de Jean Porsche en ${studio.city}`}
-                      src={`https://maps.google.com/maps?q=${query}&z=16&output=embed`}
-                      loading="lazy"
-                      allowFullScreen
-                      referrerPolicy="no-referrer-when-downgrade"
-                      tabIndex={-1}
-                    />
-                    <span className="studio-map__wash" aria-hidden="true" />
-                    <a
-                      className="studio-map__surface"
-                      href={mapLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={`Abrir el mapa del estudio de ${studio.city}`}
-                    />
-                    <div className="studio-map__details">
-                      <span className="studio-map__index" aria-hidden="true">0{index + 1}</span>
-                      <address>
-                        <strong>{studio.city}</strong>
-                        <span>{studio.lines[0]}<br />{studio.lines[1]}</span>
-                      </address>
-                      <a
-                        href={mapLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`Abrir la ubicación de ${studio.city} en Google Maps`}
-                      >
-                        <span aria-hidden="true">↗</span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
+                <a
+                  className="contact-address"
+                  href={mapLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Abrir la ubicación de ${studio.city} en Google Maps`}
+                  key={studio.city}
+                  onPointerEnter={(event) => showMapPreview(studio, event)}
+                  onPointerMove={(event) => moveMapPreview(event.clientX, event.clientY)}
+                  onPointerLeave={() => setActiveStudio(null)}
+                  onFocus={(event) => {
+                    const bounds = event.currentTarget.getBoundingClientRect()
+                    setActiveStudio(studio)
+                    moveMapPreview(bounds.right, bounds.top + bounds.height / 2)
+                  }}
+                  onBlur={() => setActiveStudio(null)}
+                >
+                  <span className="contact-address__index" aria-hidden="true">0{index + 1}</span>
+                  <address>
+                    <strong>{studio.city}</strong>
+                    <span>{studio.lines[0]}<br />{studio.lines[1]}</span>
+                  </address>
+                  <span className="contact-address__arrow" aria-hidden="true">↗</span>
+                </a>
               )
             })}
+          </div>
+          <div
+            className={`contact-map-preview ${activeStudio ? 'contact-map-preview--visible' : ''}`.trim()}
+            ref={mapPreviewRef}
+            aria-hidden="true"
+          >
+            <div className="contact-map-preview__inner">
+              {activeStudio ? (
+                <iframe
+                  title={`Vista previa del mapa de ${activeStudio.city}`}
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(activeStudio.query)}&z=16&output=embed`}
+                  loading="eager"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  tabIndex={-1}
+                />
+              ) : null}
+            </div>
           </div>
         </div>
 
