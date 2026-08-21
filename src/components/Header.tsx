@@ -49,7 +49,7 @@ export function Header() {
   const closeMenu = () => setOpen(false)
 
   return (
-    <header className={`site-header ${scrolled || open ? 'site-header--solid' : ''} ${scrolled ? 'site-header--logo-image' : ''}`.trim()}>
+    <header className={`site-header ${scrolled || open ? 'site-header--solid' : ''} ${scrolled ? 'site-header--logo-image' : ''} ${open ? 'site-header--menu-open' : ''}`.trim()}>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <a className="wordmark" href="/#inicio" aria-label="Jean Porsche, volver al inicio">
         <span className="wordmark__text" aria-hidden="true">
@@ -86,17 +86,12 @@ export function Header() {
         ref={menuRef}
       >
         <nav aria-label="Navegación móvil">
-          {navigation.map((item, index) => (
+          {navigation.map((item) => (
             <a href={item.href} key={item.href} onClick={closeMenu} tabIndex={open ? 0 : -1}>
-              <small>0{index + 1}</small>
               <span>{item.label}</span>
             </a>
           ))}
         </nav>
-        <div className="mobile-menu__meta">
-          <a href="mailto:info@xsche.es" tabIndex={open ? 0 : -1}>info@xsche.es</a>
-          <span>Madrid · Menorca</span>
-        </div>
       </div>
     </header>
   )
