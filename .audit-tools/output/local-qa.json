@@ -1,0 +1,341 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "metrics": {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "document": {
+        "width": 1440,
+        "height": 14126
+      },
+      "overflowX": false,
+      "h1Count": 1,
+      "headingOrder": [
+        {
+          "level": 1,
+          "text": "Cuando el estilotiene nombre propio"
+        },
+        {
+          "level": 2,
+          "text": "Espacios con carácter, pensados para ser vividos."
+        },
+        {
+          "level": 2,
+          "text": "Cada proyecto pide una respuesta distinta."
+        },
+        {
+          "level": 3,
+          "text": "Residencial"
+        },
+        {
+          "level": 3,
+          "text": "Restaurantes"
+        },
+        {
+          "level": 3,
+          "text": "Casa Decor"
+        },
+        {
+          "level": 2,
+          "text": "Una mirada libre, culta y emocional."
+        },
+        {
+          "level": 2,
+          "text": "Un proyecto empieza mucho antes del dibujo."
+        },
+        {
+          "level": 3,
+          "text": "El cliente"
+        },
+        {
+          "level": 3,
+          "text": "El espacio"
+        },
+        {
+          "level": 3,
+          "text": "La distribución"
+        },
+        {
+          "level": 3,
+          "text": "La luz"
+        },
+        {
+          "level": 2,
+          "text": "Lugares con memoria, color y una voz propia."
+        },
+        {
+          "level": 3,
+          "text": "Casa V+E"
+        },
+        {
+          "level": 3,
+          "text": "Baoli"
+        },
+        {
+          "level": 3,
+          "text": "Casa BB"
+        },
+        {
+          "level": 3,
+          "text": "Restaurante Coque"
+        },
+        {
+          "level": 3,
+          "text": "Gabinete Visconti"
+        },
+        {
+          "level": 3,
+          "text": "Toujours à Madrid"
+        },
+        {
+          "level": 2,
+          "text": "El espacio también se recuerda por cómo nos hace sentir."
+        },
+        {
+          "level": 2,
+          "text": "¿Imaginamos juntos tu próximo espacio?"
+        }
+      ],
+      "emptyLinks": 0,
+      "imagesMissingAlt": [],
+      "targetsBelow44": [],
+      "fonts": {
+        "body": "\"Instrument Sans\", Arial, sans-serif",
+        "h1": "\"Instrument Serif\", Georgia, serif"
+      }
+    },
+    "axe": [],
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "tablet",
+    "width": 768,
+    "height": 1024,
+    "metrics": {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "document": {
+        "width": 768,
+        "height": 12634
+      },
+      "overflowX": false,
+      "h1Count": 1,
+      "headingOrder": [
+        {
+          "level": 1,
+          "text": "Cuando el estilotiene nombre propio"
+        },
+        {
+          "level": 2,
+          "text": "Espacios con carácter, pensados para ser vividos."
+        },
+        {
+          "level": 2,
+          "text": "Cada proyecto pide una respuesta distinta."
+        },
+        {
+          "level": 3,
+          "text": "Residencial"
+        },
+        {
+          "level": 3,
+          "text": "Restaurantes"
+        },
+        {
+          "level": 3,
+          "text": "Casa Decor"
+        },
+        {
+          "level": 2,
+          "text": "Una mirada libre, culta y emocional."
+        },
+        {
+          "level": 2,
+          "text": "Un proyecto empieza mucho antes del dibujo."
+        },
+        {
+          "level": 3,
+          "text": "El cliente"
+        },
+        {
+          "level": 3,
+          "text": "El espacio"
+        },
+        {
+          "level": 3,
+          "text": "La distribución"
+        },
+        {
+          "level": 3,
+          "text": "La luz"
+        },
+        {
+          "level": 2,
+          "text": "Lugares con memoria, color y una voz propia."
+        },
+        {
+          "level": 3,
+          "text": "Casa V+E"
+        },
+        {
+          "level": 3,
+          "text": "Baoli"
+        },
+        {
+          "level": 3,
+          "text": "Casa BB"
+        },
+        {
+          "level": 3,
+          "text": "Restaurante Coque"
+        },
+        {
+          "level": 3,
+          "text": "Gabinete Visconti"
+        },
+        {
+          "level": 3,
+          "text": "Toujours à Madrid"
+        },
+        {
+          "level": 2,
+          "text": "El espacio también se recuerda por cómo nos hace sentir."
+        },
+        {
+          "level": 2,
+          "text": "¿Imaginamos juntos tu próximo espacio?"
+        }
+      ],
+      "emptyLinks": 0,
+      "imagesMissingAlt": [],
+      "targetsBelow44": [],
+      "fonts": {
+        "body": "\"Instrument Sans\", Arial, sans-serif",
+        "h1": "\"Instrument Serif\", Georgia, serif"
+      }
+    },
+    "axe": [],
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "height": 844,
+    "metrics": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 14238
+      },
+      "overflowX": false,
+      "h1Count": 1,
+      "headingOrder": [
+        {
+          "level": 1,
+          "text": "Cuando el estilotiene nombre propio"
+        },
+        {
+          "level": 2,
+          "text": "Espacios con carácter, pensados para ser vividos."
+        },
+        {
+          "level": 2,
+          "text": "Cada proyecto pide una respuesta distinta."
+        },
+        {
+          "level": 3,
+          "text": "Residencial"
+        },
+        {
+          "level": 3,
+          "text": "Restaurantes"
+        },
+        {
+          "level": 3,
+          "text": "Casa Decor"
+        },
+        {
+          "level": 2,
+          "text": "Una mirada libre, culta y emocional."
+        },
+        {
+          "level": 2,
+          "text": "Un proyecto empieza mucho antes del dibujo."
+        },
+        {
+          "level": 3,
+          "text": "El cliente"
+        },
+        {
+          "level": 3,
+          "text": "El espacio"
+        },
+        {
+          "level": 3,
+          "text": "La distribución"
+        },
+        {
+          "level": 3,
+          "text": "La luz"
+        },
+        {
+          "level": 2,
+          "text": "Lugares con memoria, color y una voz propia."
+        },
+        {
+          "level": 3,
+          "text": "Casa V+E"
+        },
+        {
+          "level": 3,
+          "text": "Baoli"
+        },
+        {
+          "level": 3,
+          "text": "Casa BB"
+        },
+        {
+          "level": 3,
+          "text": "Restaurante Coque"
+        },
+        {
+          "level": 3,
+          "text": "Gabinete Visconti"
+        },
+        {
+          "level": 3,
+          "text": "Toujours à Madrid"
+        },
+        {
+          "level": 2,
+          "text": "El espacio también se recuerda por cómo nos hace sentir."
+        },
+        {
+          "level": 2,
+          "text": "¿Imaginamos juntos tu próximo espacio?"
+        }
+      ],
+      "emptyLinks": 0,
+      "imagesMissingAlt": [],
+      "targetsBelow44": [],
+      "fonts": {
+        "body": "\"Instrument Sans\", Arial, sans-serif",
+        "h1": "\"Instrument Serif\", Georgia, serif"
+      }
+    },
+    "axe": [],
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+]

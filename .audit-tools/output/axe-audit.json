@@ -1,0 +1,1815 @@
+{
+  "desktop": {
+    "/home": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(2) > a[href$=\"destacados\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/destacados\" data-animation-role=\"header-element\">\n        Destacados\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #eae6dd, background color: #4277b0, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--folder.header-nav-item > .header-nav-folder-title[data-href$=\"interiorismo\"][aria-controls=\"interiorismo\"] > .header-nav-folder-title-text"
+              ],
+              "html": "<span class=\"header-nav-folder-title-text\">\n        Interiorismo\n      </span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #eae6dd, background color: #4277b0, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(4) > a[href$=\"contact\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/contact\" data-animation-role=\"header-element\">\n        Contacto\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #eae6dd, background color: #4277b0, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"] > .current-language > .current-language-name[data-wg-notranslate=\"\"]"
+              ],
+              "html": "<span data-wg-notranslate=\"\" class=\"current-language-name\">Español</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #eae6dd, background color: #4277b0, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    },
+    "/destacados": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--homepage.header-nav-item--collection.header-nav-item > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/\" data-animation-role=\"header-element\">\n        Inicio\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--folder.header-nav-item > .header-nav-folder-title[data-href$=\"interiorismo\"][aria-controls=\"interiorismo\"] > .header-nav-folder-title-text"
+              ],
+              "html": "<span class=\"header-nav-folder-title-text\">\n        Interiorismo\n      </span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(4) > a[href$=\"contact\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/contact\" data-animation-role=\"header-element\">\n        Contacto\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"] > .current-language > .current-language-name[data-wg-notranslate=\"\"]"
+              ],
+              "html": "<span data-wg-notranslate=\"\" class=\"current-language-name\">Español</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "h3"
+              ],
+              "html": "<h3 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">DESTACADOS</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 92.9pt (123.9px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316372804_70 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    CASA TORRE\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316372804_77 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    GABINETE VISCONTI\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316372804_84 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    RESTAURANTE COQUE\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-ve-3\"]"
+              ],
+              "html": "<a href=\"/casa-ve-3\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    CASA BB\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-ve\"]"
+              ],
+              "html": "<a href=\"/casa-ve\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    CASA V+E\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316372804_105 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    PETIT PALAIS\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316372804_112 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    HOTEL CLUB 29\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316372804_119 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    SUNSET BAR\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 7
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/about": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--homepage.header-nav-item--collection.header-nav-item > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/\" data-animation-role=\"header-element\">\n        Inicio\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(2) > a[href$=\"destacados\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/destacados\" data-animation-role=\"header-element\">\n        Destacados\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--folder.header-nav-item > .header-nav-folder-title[data-href$=\"interiorismo\"][aria-controls=\"interiorismo\"] > .header-nav-folder-title-text"
+              ],
+              "html": "<span class=\"header-nav-folder-title-text\">\n        Interiorismo\n      </span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(4) > a[href$=\"contact\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/contact\" data-animation-role=\"header-element\">\n        Contacto\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"] > .current-language > .current-language-name[data-wg-notranslate=\"\"]"
+              ],
+              "html": "<span data-wg-notranslate=\"\" class=\"current-language-name\">Español</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-633ec170abf86e03cf88 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\">Jean Porsche</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-1 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">El cliente</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 27.1pt (36.16px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-2 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">El espacio</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 27.1pt (36.16px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-3 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">La distribución</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 27.1pt (36.16px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-4 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">La luz</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 27.1pt (36.16px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-5 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">La luz</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 27.1pt (36.16px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#block-5e59d600ebe3537e0fa0 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\">¿Quieres que trabajemos juntos? Ingresa tus datos y nos pondremos en contacto contigo en breve. Esperamos tener noticias tuyas pronto.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".s9aw5DV2uY72CSBH > span"
+              ],
+              "html": "<span>Nombre</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".first-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Nombre<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 10.7pt (14.272px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".last-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Apellido<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 10.7pt (14.272px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#email-yui_3_17_2_1_1733847605480_2008 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Correo electrónico</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "span[data-dynamic-strings=\"true\"]"
+              ],
+              "html": "<span data-dynamic-strings=\"true\">Regístrate para recibir noticias y actualizaciones</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 10.7pt (14.272px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#textarea-yui_3_17_2_1_1733847605480_2010 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Mensaje</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 9
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/contact": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--homepage.header-nav-item--collection.header-nav-item > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/\" data-animation-role=\"header-element\">\n        Inicio\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(2) > a[href$=\"destacados\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/destacados\" data-animation-role=\"header-element\">\n        Destacados\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--folder.header-nav-item > .header-nav-folder-title[data-href$=\"interiorismo\"][aria-controls=\"interiorismo\"] > .header-nav-folder-title-text"
+              ],
+              "html": "<span class=\"header-nav-folder-title-text\">\n        Interiorismo\n      </span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"] > .current-language > .current-language-name[data-wg-notranslate=\"\"]"
+              ],
+              "html": "<span data-wg-notranslate=\"\" class=\"current-language-name\">Español</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-517cea57efe891a066bf > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p:nth-child(2)"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Calle de Castelló 59,                         28001 Madrid.                                España</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-f6ae6212f57987b30482 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Cami des Castell 57,                         07702  Mahón, Menorca,                  Islas Baleares.  España</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".s9aw5DV2uY72CSBH > span"
+              ],
+              "html": "<span>Nombre</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".first-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Nombre<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 10.7pt (14.272px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".last-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Apellido<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 10.7pt (14.272px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#email-yui_3_17_2_1_1656615088309_7772 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Correo electrónico</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#textarea-yui_3_17_2_1_1656615088309_7774 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Mensaje</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 11
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/residencial": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "a[href$=\"casa-jj\"]"
+              ],
+              "html": "<a href=\"/casa-jj\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa J+J\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-a-s\"]"
+              ],
+              "html": "<a href=\"/casa-a-s\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa A+S\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-bl\"]"
+              ],
+              "html": "<a href=\"/casa-bl\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa B+L\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-bb-menorca\"]"
+              ],
+              "html": "<a href=\"/casa-bb-menorca\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa BB\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".sqs-block-button-element--medium[href=\"\"][target=\"_blank\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" target=\"_blank\" data-initialized=\"true\">\n    Casa M+S\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-torre\"]"
+              ],
+              "html": "<a href=\"/casa-torre\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    casa torre\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-ja\"]"
+              ],
+              "html": "<a href=\"/casa-ja\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa J+A\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"the-edge\"]"
+              ],
+              "html": "<a href=\"/the-edge\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    The Edge\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 9
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    },
+    "/restaurantes": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--homepage.header-nav-item--collection.header-nav-item > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/\" data-animation-role=\"header-element\">\n        Inicio\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(2) > a[href$=\"destacados\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/destacados\" data-animation-role=\"header-element\">\n        Destacados\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(4) > a[href$=\"contact\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/contact\" data-animation-role=\"header-element\">\n        Contacto\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"] > .current-language > .current-language-name[data-wg-notranslate=\"\"]"
+              ],
+              "html": "<span data-wg-notranslate=\"\" class=\"current-language-name\">Español</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".sqsrte-text-color--accent"
+              ],
+              "html": "<span class=\"sqsrte-text-color--accent\">Restaurantes</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 150.8pt (201.1px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"baoli\"]"
+              ],
+              "html": "<a href=\"/baoli\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Baoli\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".sqs-block-button-element--medium.sqs-block-button-element[href$=\"chez-lumiere\"]"
+              ],
+              "html": "<a href=\"/chez-lumiere\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Chez Lumiere\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316386524_84 > .sqs-block-button-element--medium[href=\"\"][target=\"_blank\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" target=\"_blank\" data-initialized=\"true\">\n    Lelong\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"beach-sanctipetri\"]"
+              ],
+              "html": "<a href=\"/beach-sanctipetri\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Beach\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"coque\"]"
+              ],
+              "html": "<a href=\"/coque\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Coque\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316386524_105 > .sqs-block-button-element--medium[href=\"\"][target=\"_blank\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" target=\"_blank\" data-initialized=\"true\">\n    Club de Mar\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"sunset\"]"
+              ],
+              "html": "<a href=\"/sunset\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Sunset\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 18.3pt (24.4px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link[data-sqsp-image-block-link=\"\"][href$=\"chez-lumiere\"]"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fill\" data-sqsp-image-block-link=\"\" href=\"/chez-lumiere\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": [
+                ".sqs-block-image-link.content-fit[data-sqsp-image-block-link=\"\"]"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 2
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    },
+    "/grandes-proyectos": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--homepage.header-nav-item--collection.header-nav-item > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/\" data-animation-role=\"header-element\">\n        Inicio\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(2) > a[href$=\"destacados\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/destacados\" data-animation-role=\"header-element\">\n        Destacados\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--folder.header-nav-item > .header-nav-folder-title[data-href$=\"interiorismo\"][aria-controls=\"interiorismo\"] > .header-nav-folder-title-text"
+              ],
+              "html": "<span class=\"header-nav-folder-title-text\">\n        Interiorismo\n      </span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-title-nav-wrapper > .header-nav > .header-nav-wrapper > .header-nav-list > .header-nav-item--collection.header-nav-item:nth-child(4) > a[href$=\"contact\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a href=\"/contact\" data-animation-role=\"header-element\">\n        Contacto\n      </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"] > .current-language > .current-language-name[data-wg-notranslate=\"\"]"
+              ],
+              "html": "<span data-wg-notranslate=\"\" class=\"current-language-name\">Español</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "code"
+              ],
+              "html": "<code>Nuestro trabajo habla por sí mismo</code>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 1
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/casa-ve": {
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-desktop > .header-actions.header-actions--right > .language-picker-desktop[aria-controls=\"language-picker-menu\"][aria-label=\"language picker\"]"
+              ],
+              "html": "<div aria-controls=\"language-picker-menu\" aria-expanded=\"false\" aria-label=\"language picker\" class=\"language-picker language-picker-desktop\" id=\"multilingual-language-picker-desktop\" role=\"listbox\" tabindex=\"0\">",
+              "failureSummary": "Fix any of the following:\n  Required ARIA children role not present: group, option"
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "#block-yui_3_17_2_1_1785338908119_6497 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p style=\"text-align: right; ; white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">*Publicada en Elle Decoration España 2024</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 7
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    }
+  },
+  "mobile": {
+    "/home": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-mobile > .header-title-nav-wrapper > .header-title[data-animation-role=\"header-element\"] > .header-title-text > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a id=\"site-title\" href=\"/\" data-animation-role=\"header-element\">Jean Porsche Arquitectura + Interiores</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #eae6dd, background color: #4277b0, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".sqs-block-button-element--medium"
+              ],
+              "html": "<a href=\"/destacados\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    * Proyectos Destacados\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 2
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    },
+    "/destacados": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-mobile > .header-title-nav-wrapper > .header-title[data-animation-role=\"header-element\"] > .header-title-text > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a id=\"site-title\" href=\"/\" data-animation-role=\"header-element\">Jean Porsche Arquitectura + Interiores</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "h3"
+              ],
+              "html": "<h3 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">DESTACADOS</h3>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 58.3pt (77.8px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316401394_70 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    CASA TORRE\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316401394_77 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    GABINETE VISCONTI\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316401394_84 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    RESTAURANTE COQUE\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-ve-3\"]"
+              ],
+              "html": "<a href=\"/casa-ve-3\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    CASA BB\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-ve\"]"
+              ],
+              "html": "<a href=\"/casa-ve\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    CASA V+E\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316401394_105 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    PETIT PALAIS\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316401394_112 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    HOTEL CLUB 29\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316401394_119 > .sqs-block-button-element--medium.sqs-block-button-element[href=\"\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    SUNSET BAR\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 12
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/about": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-mobile > .header-title-nav-wrapper > .header-title[data-animation-role=\"header-element\"] > .header-title-text > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a id=\"site-title\" href=\"/\" data-animation-role=\"header-element\">Jean Porsche Arquitectura + Interiores</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-633ec170abf86e03cf88 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\">Jean Porsche</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-1 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">El cliente</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 21.1pt (28.1536px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-2 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">El espacio</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 21.1pt (28.1536px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-3 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">La distribución</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 21.1pt (28.1536px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-4 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">La luz</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 21.1pt (28.1536px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#button-301499eb915da110b2f5-5 > .accordion-item__title"
+              ],
+              "html": "<span class=\"accordion-item__title\">La luz</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 21.1pt (28.1536px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "#block-5e59d600ebe3537e0fa0 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\">¿Quieres que trabajemos juntos? Ingresa tus datos y nos pondremos en contacto contigo en breve. Esperamos tener noticias tuyas pronto.</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".s9aw5DV2uY72CSBH > span"
+              ],
+              "html": "<span>Nombre</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".first-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Nombre<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 11.2pt (14.9872px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".last-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Apellido<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 11.2pt (14.9872px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#email-yui_3_17_2_1_1733847605480_2008 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Correo electrónico</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "span[data-dynamic-strings=\"true\"]"
+              ],
+              "html": "<span data-dynamic-strings=\"true\">Regístrate para recibir noticias y actualizaciones</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 11.2pt (14.9872px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#textarea-yui_3_17_2_1_1733847605480_2010 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Mensaje</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".form-submit-button-label"
+              ],
+              "html": "<span class=\"form-submit-button-label\">Enviar</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #da5b37, background color: #eae6dd, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 9
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/contact": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-mobile > .header-title-nav-wrapper > .header-title[data-animation-role=\"header-element\"] > .header-title-text > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a id=\"site-title\" href=\"/\" data-animation-role=\"header-element\">Jean Porsche Arquitectura + Interiores</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-517cea57efe891a066bf > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > h4"
+              ],
+              "html": "<h4 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Madrid</h4>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 16.6pt (22.0768px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-517cea57efe891a066bf > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p:nth-child(2)"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Calle de Castelló 59,                         28001 Madrid.                                España</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-f6ae6212f57987b30482 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > h4"
+              ],
+              "html": "<h4 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Menorca</h4>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 16.6pt (22.0768px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#block-f6ae6212f57987b30482 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p class=\"\" style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Cami des Castell 57,                         07702  Mahón, Menorca,                  Islas Baleares.  España</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "h4:nth-child(2)"
+              ],
+              "html": "<h4 style=\"text-align: center; ; white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Tel.       +34.91.990.52.85</h4>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 16.6pt (22.0768px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".s9aw5DV2uY72CSBH > span"
+              ],
+              "html": "<span>Nombre</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".first-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Nombre<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 11.2pt (14.9872px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".last-name > .Jr20Ov74P4k3VW22.caption > .EdVesee9jAEAfynd > .caption-text.ryFh_rqF4tQDtSkj"
+              ],
+              "html": "<div class=\"caption-text ryFh_rqF4tQDtSkj\">Apellido<span class=\"description required\">(obligatorio)</span></div>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 11.2pt (14.9872px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#email-yui_3_17_2_1_1656615088309_7772 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Correo electrónico</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#textarea-yui_3_17_2_1_1656615088309_7774 > .YB_rseKyzcQ64VtF.title > .KBeHkQJXlg4N1Ujt > .SP08ZLkhAnk2Rqaf > span:nth-child(1)"
+              ],
+              "html": "<span>Mensaje</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #eae6dd, background color: #da5b37, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".form-submit-button-label"
+              ],
+              "html": "<span class=\"form-submit-button-label\">ENVIAR</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #da5b37, background color: #eae6dd, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 10
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/residencial": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-mobile > .header-title-nav-wrapper > .header-title[data-animation-role=\"header-element\"] > .header-title-text > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a id=\"site-title\" href=\"/\" data-animation-role=\"header-element\">Jean Porsche Arquitectura + Interiores</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.04 (foreground color: #da5b37, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-jj\"]"
+              ],
+              "html": "<a href=\"/casa-jj\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa J+J\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-a-s\"]"
+              ],
+              "html": "<a href=\"/casa-a-s\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa A+S\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-bl\"]"
+              ],
+              "html": "<a href=\"/casa-bl\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa B+L\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-bb-menorca\"]"
+              ],
+              "html": "<a href=\"/casa-bb-menorca\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa BB\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".sqs-block-button-element--medium[href=\"\"][target=\"_blank\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" target=\"_blank\" data-initialized=\"true\">\n    Casa M+S\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-torre\"]"
+              ],
+              "html": "<a href=\"/casa-torre\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    casa torre\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"casa-ja\"]"
+              ],
+              "html": "<a href=\"/casa-ja\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Casa J+A\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"the-edge\"]"
+              ],
+              "html": "<a href=\"/the-edge\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    The Edge\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    },
+    "/restaurantes": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-mobile > .header-title-nav-wrapper > .header-title[data-animation-role=\"header-element\"] > .header-title-text > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a id=\"site-title\" href=\"/\" data-animation-role=\"header-element\">Jean Porsche Arquitectura + Interiores</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".sqsrte-text-color--accent"
+              ],
+              "html": "<span class=\"sqsrte-text-color--accent\">Restaurantes</span>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.45 (foreground color: #da5b37, background color: #f0cd5f, font size: 62.6pt (83.4px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[href$=\"baoli\"]"
+              ],
+              "html": "<a href=\"/baoli\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Baoli\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".sqs-block-button-element--medium.sqs-block-button-element[href$=\"chez-lumiere\"]"
+              ],
+              "html": "<a href=\"/chez-lumiere\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Chez Lumiere\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316418083_84 > .sqs-block-button-element--medium[href=\"\"][target=\"_blank\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" target=\"_blank\" data-initialized=\"true\">\n    Lelong\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"beach-sanctipetri\"]"
+              ],
+              "html": "<a href=\"/beach-sanctipetri\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Beach\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"coque\"]"
+              ],
+              "html": "<a href=\"/coque\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Coque\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#yui_3_17_2_1_1787316418083_105 > .sqs-block-button-element--medium[href=\"\"][target=\"_blank\"]"
+              ],
+              "html": "<a href=\"\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" target=\"_blank\" data-initialized=\"true\">\n    Club de Mar\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"sunset\"]"
+              ],
+              "html": "<a href=\"/sunset\" class=\"sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element\" data-sqsp-button=\"\" data-initialized=\"true\">\n    Sunset\n  </a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.11 (foreground color: #efd06c, background color: #eec25b, font size: 15.8pt (21.064px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link[data-sqsp-image-block-link=\"\"][href$=\"chez-lumiere\"]"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fill\" data-sqsp-image-block-link=\"\" href=\"/chez-lumiere\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": [
+                ".sqs-block-image-link.content-fit[data-sqsp-image-block-link=\"\"]"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 1
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    },
+    "/grandes-proyectos": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".header-display-mobile > .header-title-nav-wrapper > .header-title[data-animation-role=\"header-element\"] > .header-title-text > a[href=\"/\"][data-animation-role=\"header-element\"]"
+              ],
+              "html": "<a id=\"site-title\" href=\"/\" data-animation-role=\"header-element\">Jean Porsche Arquitectura + Interiores</a>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "code"
+              ],
+              "html": "<code>Nuestro trabajo habla por sí mismo</code>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #4277b0, background color: #eae6dd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 1
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        }
+      ]
+    },
+    "/casa-ve": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "#block-yui_3_17_2_1_1785338908119_6497 > .sqs-block-content > .sqs-text-block-container > .sqs-html-content[data-sqsp-text-block-content=\"\"] > p"
+              ],
+              "html": "<p style=\"text-align: right; ; white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">*Publicada en Elle Decoration España 2024</p>",
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.02 (foreground color: #4277b0, background color: #f0cd5f, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "description": "Ensure links have discernible text",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".sqs-block-image-link"
+              ],
+              "html": "<a class=\"sqs-block-image-link js-content-mode-element content-fit\" data-sqsp-image-block-link=\"\" href=\"https://www.revistaad.es/galerias/ad100-2025\" target=\"_blank\">",
+              "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 5
+        },
+        {
+          "id": "duplicate-id-aria",
+          "impact": "critical",
+          "help": "IDs used in ARIA and labels must be unique",
+          "nodes": 2
+        },
+        {
+          "id": "video-caption",
+          "impact": "critical",
+          "help": "<video> elements must have captions",
+          "nodes": 1
+        }
+      ]
+    }
+  }
+}
