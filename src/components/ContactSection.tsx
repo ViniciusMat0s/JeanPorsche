@@ -4,6 +4,19 @@ import { LayoutContainer } from './LayoutContainer'
 
 type ContactChannel = 'email' | 'whatsapp'
 
+const studios = [
+  {
+    city: 'Madrid',
+    lines: ['Calle de Castelló 59', '28001 Madrid'],
+    query: 'Calle de Castelló 59, 28001 Madrid, España',
+  },
+  {
+    city: 'Menorca',
+    lines: ['Camí des Castell 57', '07702 Mahón'],
+    query: 'Camí des Castell 57, 07702 Maó, Illes Balears, España',
+  },
+]
+
 export function ContactSection() {
   const [message, setMessage] = useState('')
   const [channel, setChannel] = useState<ContactChannel>('email')
@@ -45,9 +58,49 @@ export function ContactSection() {
           <p className="eyebrow" data-reveal>Contacto</p>
           <AnimatedText id="contact-title" text="¿Imaginamos juntos tu próximo espacio?" />
           <p data-reveal>Cuéntanos el punto de partida. El estudio responderá directamente a tu consulta.</p>
-          <div className="contact-addresses" data-reveal>
-            <address><strong>Madrid</strong><span>Calle de Castelló 59<br />28001 Madrid</span></address>
-            <address><strong>Menorca</strong><span>Camí des Castell 57<br />07702 Mahón</span></address>
+          <div className="contact-locations" data-reveal>
+            {studios.map((studio, index) => {
+              const query = encodeURIComponent(studio.query)
+              const mapLink = `https://www.google.com/maps/search/?api=1&query=${query}`
+
+              return (
+                <article className="studio-map" key={studio.city}>
+                  <div className="studio-map__viewport">
+                    <iframe
+                      title={`Mapa del estudio de Jean Porsche en ${studio.city}`}
+                      src={`https://maps.google.com/maps?q=${query}&z=16&output=embed`}
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                      tabIndex={-1}
+                    />
+                    <span className="studio-map__wash" aria-hidden="true" />
+                    <a
+                      className="studio-map__surface"
+                      href={mapLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Abrir el mapa del estudio de ${studio.city}`}
+                    />
+                    <div className="studio-map__details">
+                      <span className="studio-map__index" aria-hidden="true">0{index + 1}</span>
+                      <address>
+                        <strong>{studio.city}</strong>
+                        <span>{studio.lines[0]}<br />{studio.lines[1]}</span>
+                      </address>
+                      <a
+                        href={mapLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Abrir la ubicación de ${studio.city} en Google Maps`}
+                      >
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
 
