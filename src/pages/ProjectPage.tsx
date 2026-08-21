@@ -44,11 +44,8 @@ export function ProjectPage() {
           </div>
           <div className="hero__overlay" />
           <LayoutContainer className="project-hero__content">
-            <nav className="breadcrumb" aria-label="Migas de pan" data-hero-reveal>
-              <Link to="/">Inicio</Link><span aria-hidden="true">/</span><a href="/#proyectos">Proyectos</a><span aria-hidden="true">/</span><span>{project.title}</span>
-            </nav>
-            <p className="project-hero__meta" data-hero-reveal>{project.category} · {project.location}</p>
             <h1 id="project-title" data-hero-reveal>{project.title}</h1>
+            <p className="project-hero__meta" data-hero-reveal>{project.category} · {project.location}</p>
           </LayoutContainer>
         </section>
 
@@ -64,14 +61,14 @@ export function ProjectPage() {
         </section>
 
         <section className="project-gallery" aria-label={`Galería de ${project.title}`}>
-          <LayoutContainer className="project-gallery__grid">
+          <div className="project-gallery__grid">
             {project.gallery.map((item, index) => (
               <figure className={`project-gallery__item project-gallery__item--${index + 1}`} key={item.image} data-image-reveal data-reveal>
                 <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} data-image-inner />
                 <figcaption>{String(index + 1).padStart(2, '0')} / {String(project.gallery.length).padStart(2, '0')}</figcaption>
               </figure>
             ))}
-          </LayoutContainer>
+          </div>
         </section>
 
         {project.quote ? (
