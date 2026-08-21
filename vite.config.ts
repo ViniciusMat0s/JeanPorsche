@@ -6,5 +6,13 @@ export default defineConfig({
   build: {
     target: 'es2022',
     cssCodeSplit: true,
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        residencial: 'residencial/index.html',
+        restaurantes: 'restaurantes/index.html',
+        casaDecor: 'casa-decor/index.html',
+      },
+    },
   },
 })

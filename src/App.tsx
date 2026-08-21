@@ -1,37 +1,41 @@
-import { useRef } from 'react'
-import { AboutSection } from './components/AboutSection'
-import { ContactSection } from './components/ContactSection'
-import { Footer } from './components/Footer'
-import { GallerySection } from './components/GallerySection'
-import { Header } from './components/Header'
-import { Hero } from './components/Hero'
-import { IntroSection } from './components/IntroSection'
-import { ManifestoSection } from './components/ManifestoSection'
-import { ProcessSection } from './components/ProcessSection'
-import { ProjectsSection } from './components/ProjectsSection'
-import { ServicesSection } from './components/ServicesSection'
-import { useGsapPage } from './hooks/useGsapPage'
+import { useEffect } from 'react'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { CategoryPage } from './pages/CategoryPage'
+import { HomePage } from './pages/HomePage'
+
+function RouteEffects() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash) {
+      window.requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView())
+      return
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [location.pathname, location.hash])
+
+  useEffect(() => {
+    if (location.pathname !== '/') return
+    document.title = 'Jean Porsche — Arquitectura + Interiores'
+    document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute(
+      'content',
+      'Jean Porsche Arquitectura + Interiores. Proyectos residenciales, restaurantes y espacios de autor desde Madrid y Menorca.',
+    )
+    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', 'https://www.xsche.es/')
+  }, [location.pathname])
+
+  return null
+}
 
 function App() {
-  const pageRef = useRef<HTMLDivElement>(null)
-  useGsapPage(pageRef)
-
   return (
-    <div className="site" ref={pageRef}>
-      <Header />
-      <main id="contenido">
-        <Hero />
-        <IntroSection />
-        <ServicesSection />
-        <AboutSection />
-        <ProcessSection />
-        <ManifestoSection />
-        <ProjectsSection />
-        <GallerySection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <RouteEffects />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:slug" element={<CategoryPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

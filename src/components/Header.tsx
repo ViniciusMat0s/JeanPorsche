@@ -51,7 +51,7 @@ export function Header() {
   return (
     <header className={`site-header ${scrolled || open ? 'site-header--solid' : ''}`.trim()}>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
-      <a className="wordmark" href="#inicio" aria-label="Jean Porsche, volver al inicio">
+      <a className="wordmark" href="/#inicio" aria-label="Jean Porsche, volver al inicio">
         <span>Jean Porsche</span>
         <small>Arquitectura + Interiores</small>
       </a>

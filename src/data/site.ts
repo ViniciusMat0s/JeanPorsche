@@ -16,10 +16,10 @@ export type Service = {
 }
 
 export const navigation = [
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Estudio', href: '#estudio' },
-  { label: 'Enfoque', href: '#enfoque' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Proyectos', href: '/#proyectos' },
+  { label: 'Estudio', href: '/#estudio' },
+  { label: 'Enfoque', href: '/#enfoque' },
+  { label: 'Contacto', href: '/#contacto' },
 ]
 
 export const services: Service[] = [
@@ -27,19 +27,19 @@ export const services: Service[] = [
     index: '01',
     title: 'Residencial',
     description: 'Viviendas e interiores con identidad propia en Madrid, Menorca y otros destinos.',
-    href: 'https://www.xsche.es/residencial',
+    href: '/residencial/',
   },
   {
     index: '02',
     title: 'Restaurantes',
     description: 'Espacios para la hospitalidad donde arquitectura, ambiente y experiencia dialogan.',
-    href: 'https://www.xsche.es/restaurantes',
+    href: '/restaurantes/',
   },
   {
     index: '03',
     title: 'Casa Decor',
     description: 'Espacios especiales que exploran color, materiales, arte y nuevas formas de habitar.',
-    href: 'https://www.xsche.es/casa-decor',
+    href: '/casa-decor/',
   },
 ]
 
