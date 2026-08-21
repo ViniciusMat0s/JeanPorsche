@@ -373,8 +373,7 @@ button { color: inherit; }
 .contact-section h2 { margin: 0 0 var(--space-4); max-width: 9ch; font-family: var(--display); font-size: clamp(3.7rem, 7vw, 7.5rem); font-weight: 400; letter-spacing: -.05em; line-height: .88; }
 .contact-section__copy > p:not(.eyebrow) { max-width: 30rem; font-size: 1.1rem; }
 .contact-locations { display: grid; margin-top: var(--space-5); border-top: 1px solid var(--ink); }
-.contact-address { display: grid; grid-template-columns: 2.75rem 1fr auto; gap: var(--space-3); min-height: 7.5rem; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--ink); cursor: pointer; transition: padding .35s ease, background-color .35s ease; }
-.contact-address__index { align-self: start; padding-top: .35rem; font-size: .64rem; font-weight: 650; letter-spacing: .1em; }
+.contact-address { display: grid; grid-template-columns: 1fr auto; gap: var(--space-3); min-height: 7.5rem; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--ink); cursor: pointer; transition: padding .35s ease, background-color .35s ease; }
 .contact-address address { display: grid; gap: .4rem; font-style: normal; }
 .contact-address address strong { font-family: var(--display); font-size: clamp(2rem, 3.1vw, 3.2rem); font-weight: 400; letter-spacing: -.035em; line-height: 1; }
 .contact-address address span { font-size: .78rem; line-height: 1.4; }
@@ -382,10 +381,11 @@ button { color: inherit; }
 .contact-address:is(:hover, :focus-visible) { padding-inline: 1rem; background: rgb(255 253 247 / 28%); outline: 0; }
 .contact-address:is(:hover, :focus-visible) .contact-address__arrow { background: var(--ink); color: var(--white); transform: rotate(8deg); }
 .contact-map-preview { position: fixed; z-index: 150; top: 0; left: 0; width: clamp(13.5rem, 18vw, 18rem); aspect-ratio: 1; pointer-events: none; transform: translate3d(-120%, -120%, 0); will-change: transform; }
-.contact-map-preview__inner { position: absolute; overflow: hidden; inset: 0; border: 1px solid rgb(255 255 255 / 72%); border-radius: .2rem; background: #d3cec4; box-shadow: 0 1.5rem 4rem rgb(29 29 27 / 28%); opacity: 0; transform: scale(.82) rotate(-1.5deg); transition: opacity .22s ease, transform .42s cubic-bezier(.2, .78, .2, 1); }
+.contact-map-preview__inner { position: absolute; overflow: hidden; inset: 0; border: 1px solid rgb(255 255 255 / 72%); border-radius: .2rem; background: #d3cec4; box-shadow: 0 1.5rem 4rem rgb(29 29 27 / 28%); opacity: 0; transform: scale(.72) rotate(-1.5deg); transform-origin: center; transition: opacity .22s ease, transform .34s cubic-bezier(.4, 0, .3, 1); }
 .contact-map-preview__inner::after { content: ''; position: absolute; inset: .5rem; border: 1px solid rgb(255 220 43 / 58%); pointer-events: none; }
-.contact-map-preview iframe { width: 100%; height: 100%; border: 0; filter: saturate(.78) contrast(1.04); transform: scale(1.06); }
-.contact-map-preview--visible .contact-map-preview__inner { opacity: 1; transform: scale(1) rotate(0deg); }
+.contact-map-preview iframe { width: 100%; height: 100%; border: 0; filter: saturate(.78) contrast(1.04); transform: scale(1.12); transition: transform .48s cubic-bezier(.2, .78, .2, 1); }
+.contact-map-preview--visible .contact-map-preview__inner { opacity: 1; transform: scale(1) rotate(0deg); transition-duration: .28s, .5s; }
+.contact-map-preview--visible iframe { transform: scale(1.06); }
 .contact-form { align-self: end; }
 .contact-channel { margin: 0 0 var(--space-4); padding: 0; border: 0; }
 .contact-channel legend { margin-bottom: .75rem; padding: 0; font-size: .68rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
@@ -615,7 +615,7 @@ button { color: inherit; }
   .gallery-grid__item { width: 100%; margin: 0; }
   .gallery-grid__item--2 { width: 90%; align-self: end; }
   .gallery-grid__item--3 { width: 78%; align-self: center; }
-  .contact-address { grid-template-columns: 2rem 1fr auto; gap: 1rem; min-height: 7rem; }
+  .contact-address { grid-template-columns: 1fr auto; gap: 1rem; min-height: 7rem; }
   .site-footer__top { align-items: end; }
   .site-footer__brand > span { font-size: 3.4rem; }
   .site-footer__grid { grid-template-columns: 1fr 1fr; }

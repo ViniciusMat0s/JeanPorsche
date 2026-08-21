@@ -21,12 +21,15 @@ export function ContactSection() {
   const [message, setMessage] = useState('')
   const [channel, setChannel] = useState<ContactChannel>('email')
   const [activeStudio, setActiveStudio] = useState<(typeof studios)[number] | null>(null)
+  const [mapPreviewVisible, setMapPreviewVisible] = useState(false)
   const mapPreviewRef = useRef<HTMLDivElement>(null)
   const pointerPosition = useRef({ x: 0, y: 0 })
   const pointerFrame = useRef<number | null>(null)
+  const mapPreviewTimer = useRef<number | null>(null)
 
   useEffect(() => () => {
     if (pointerFrame.current !== null) window.cancelAnimationFrame(pointerFrame.current)
+    if (mapPreviewTimer.current !== null) window.clearTimeout(mapPreviewTimer.current)
   }, [])
 
   const moveMapPreview = (x: number, y: number) => {
@@ -48,8 +51,19 @@ export function ContactSection() {
 
   const showMapPreview = (studio: (typeof studios)[number], event: PointerEvent<HTMLAnchorElement>) => {
     if (event.pointerType === 'touch') return
+    if (mapPreviewTimer.current !== null) window.clearTimeout(mapPreviewTimer.current)
     setActiveStudio(studio)
+    setMapPreviewVisible(true)
     moveMapPreview(event.clientX, event.clientY)
+  }
+
+  const hideMapPreview = () => {
+    setMapPreviewVisible(false)
+    if (mapPreviewTimer.current !== null) window.clearTimeout(mapPreviewTimer.current)
+    mapPreviewTimer.current = window.setTimeout(() => {
+      setActiveStudio(null)
+      mapPreviewTimer.current = null
+    }, 420)
   }
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
@@ -89,7 +103,7 @@ export function ContactSection() {
           <AnimatedText id="contact-title" text="¿Imaginamos juntos tu próximo espacio?" />
           <p data-reveal>Cuéntanos el punto de partida. El estudio responderá directamente a tu consulta.</p>
           <div className="contact-locations" data-reveal>
-            {studios.map((studio, index) => {
+            {studios.map((studio) => {
               const query = encodeURIComponent(studio.query)
               const mapLink = `https://www.google.com/maps/search/?api=1&query=${query}`
 
@@ -103,15 +117,16 @@ export function ContactSection() {
                   key={studio.city}
                   onPointerEnter={(event) => showMapPreview(studio, event)}
                   onPointerMove={(event) => moveMapPreview(event.clientX, event.clientY)}
-                  onPointerLeave={() => setActiveStudio(null)}
+                  onPointerLeave={hideMapPreview}
                   onFocus={(event) => {
                     const bounds = event.currentTarget.getBoundingClientRect()
+                    if (mapPreviewTimer.current !== null) window.clearTimeout(mapPreviewTimer.current)
                     setActiveStudio(studio)
+                    setMapPreviewVisible(true)
                     moveMapPreview(bounds.right, bounds.top + bounds.height / 2)
                   }}
-                  onBlur={() => setActiveStudio(null)}
+                  onBlur={hideMapPreview}
                 >
-                  <span className="contact-address__index" aria-hidden="true">0{index + 1}</span>
                   <address>
                     <strong>{studio.city}</strong>
                     <span>{studio.lines[0]}<br />{studio.lines[1]}</span>
@@ -122,7 +137,7 @@ export function ContactSection() {
             })}
           </div>
           <div
-            className={`contact-map-preview ${activeStudio ? 'contact-map-preview--visible' : ''}`.trim()}
+            className={`contact-map-preview ${mapPreviewVisible ? 'contact-map-preview--visible' : ''}`.trim()}
             ref={mapPreviewRef}
             aria-hidden="true"
           >
