@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { AnimatedText } from '../components/AnimatedText'
 import { ContactSection } from '../components/ContactSection'
@@ -8,25 +8,14 @@ import { LayoutContainer } from '../components/LayoutContainer'
 import { projectDetailBySlug, projectDetails } from '../data/projectDetails'
 import { useGsapPage } from '../hooks/useGsapPage'
 import { NotFoundPage } from './NotFoundPage'
+import { projectMetadata, usePageMetadata } from '../lib/seo'
 
 export function ProjectPage() {
   const { slug = '' } = useParams()
   const project = projectDetailBySlug[slug]
   const pageRef = useRef<HTMLDivElement>(null)
   useGsapPage(pageRef)
-
-  useEffect(() => {
-    if (!project) return
-    const title = `${project.title} — Jean Porsche Arquitectura + Interiores`
-    const canonical = `https://www.xsche.es/proyectos/${project.slug}/`
-    document.title = title
-    document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', project.description)
-    document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.setAttribute('content', title)
-    document.querySelector<HTMLMetaElement>('meta[property="og:description"]')?.setAttribute('content', project.description)
-    document.querySelector<HTMLMetaElement>('meta[property="og:url"]')?.setAttribute('content', canonical)
-    document.querySelector<HTMLMetaElement>('meta[property="og:image"]')?.setAttribute('content', `https://www.xsche.es${project.hero}`)
-    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', canonical)
-  }, [project])
+  usePageMetadata(project ? projectMetadata(project) : null)
 
   if (!project) return <NotFoundPage />
 

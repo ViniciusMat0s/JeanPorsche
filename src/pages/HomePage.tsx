@@ -12,10 +12,19 @@ import { ProcessSection } from '../components/ProcessSection'
 import { ProjectsSection } from '../components/ProjectsSection'
 import { ServicesSection } from '../components/ServicesSection'
 import { useGsapPage } from '../hooks/useGsapPage'
+import { HOME_DESCRIPTION, HOME_TITLE, homeStructuredData, usePageMetadata } from '../lib/seo'
 
 export function HomePage() {
   const pageRef = useRef<HTMLDivElement>(null)
   useGsapPage(pageRef)
+  usePageMetadata({
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    canonicalPath: '/',
+    image: '/images/hero-jean-porsche.jpg',
+    imageAlt: 'Interior diseñado por Jean Porsche con mobiliario, arte y color',
+    structuredData: homeStructuredData,
+  })
 
   return (
     <div className="site" ref={pageRef}>

@@ -1,28 +1,21 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { LayoutContainer } from '../components/LayoutContainer'
 import { useGsapPage } from '../hooks/useGsapPage'
+import { usePageMetadata } from '../lib/seo'
 
 export function NotFoundPage() {
   const pageRef = useRef<HTMLDivElement>(null)
   useGsapPage(pageRef)
-
-  useEffect(() => {
-    document.title = 'Página no encontrada — Jean Porsche'
-    const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]')
-    const previousRobots = robots?.getAttribute('content')
-    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]')
-    const previousDescription = description?.getAttribute('content')
-    robots?.setAttribute('content', 'noindex, nofollow')
-    description?.setAttribute('content', 'La página solicitada no existe. Vuelve al inicio de Jean Porsche Arquitectura + Interiores.')
-
-    return () => {
-      if (previousRobots) robots?.setAttribute('content', previousRobots)
-      if (previousDescription) description?.setAttribute('content', previousDescription)
-    }
-  }, [])
+  usePageMetadata({
+    title: 'Página no encontrada | Jean Porsche',
+    description: 'La página solicitada no existe. Vuelve al inicio de Jean Porsche Arquitectura + Interiores.',
+    robots: 'noindex, follow',
+    themeColor: '#2D2D2A',
+    structuredData: null,
+  })
 
   return (
     <div className="site not-found-page" ref={pageRef}>
