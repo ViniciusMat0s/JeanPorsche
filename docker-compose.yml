@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jean-porsche-site:latest
+    container_name: jean-porsche-site
+    restart: unless-stopped
+    ports:
+      - "${SITE_PORT:-8080}:80"
+    security_opt:
+      - no-new-privileges:true

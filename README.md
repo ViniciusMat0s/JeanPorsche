@@ -24,6 +24,30 @@ npm run preview
 
 Publish only the `dist` directory. CSP, HTTP headers, HSTS, image hardening and provider-specific deployment guidance are documented in [`SECURITY.md`](SECURITY.md).
 
+## Deploy com Docker
+
+O container compila o projeto em uma etapa isolada e publica somente o conteúdo de `dist` através do Nginx:
+
+```bash
+docker compose up -d --build
+```
+
+Por padrão, o site fica disponível na porta `8080`. Para utilizar outra porta:
+
+```bash
+SITE_PORT=8081 docker compose up -d --build
+```
+
+Para atualizar uma instalação existente:
+
+```bash
+git pull --ff-only origin main
+docker compose up -d --build --remove-orphans
+docker image prune -f
+```
+
+Verifique o resultado com `docker compose ps`, `docker compose logs --tail=100 web` e `curl -I http://127.0.0.1:8080`.
+
 ## Estrutura
 
 - `src/components`: seções e componentes reutilizáveis.
