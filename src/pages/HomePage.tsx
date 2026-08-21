@@ -7,6 +7,7 @@ import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
 import { IntroSection } from '../components/IntroSection'
 import { ManifestoSection } from '../components/ManifestoSection'
+import { PageLoader } from '../components/PageLoader'
 import { ProcessSection } from '../components/ProcessSection'
 import { ProjectsSection } from '../components/ProjectsSection'
 import { ServicesSection } from '../components/ServicesSection'
@@ -18,6 +19,7 @@ export function HomePage() {
 
   return (
     <div className="site" ref={pageRef}>
+      <PageLoader />
       <Header />
       <main id="contenido">
         <Hero />

@@ -42,6 +42,7 @@ body {
 }
 
 body.menu-open { overflow: hidden; }
+body.page-loading { overflow: hidden; }
 
 body::-webkit-scrollbar { width: 10px; }
 body::-webkit-scrollbar-track { background: var(--cream); }
@@ -73,6 +74,80 @@ button { color: inherit; }
 }
 
 .skip-link:focus { transform: translateY(0); }
+
+/* Initial loader */
+.page-loader {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--cream);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: transform 1.1s cubic-bezier(.76, 0, .24, 1);
+}
+
+.page-loader::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -2.2rem;
+  left: 0;
+  height: 2.4rem;
+  border-radius: 0 0 50% 50%;
+  background: var(--cream);
+  box-shadow: 0 1.2rem 2.5rem rgb(45 45 42 / 10%);
+}
+
+.page-loader--leaving { transform: translate3d(0, -105%, 0); }
+
+.page-loader__brand {
+  position: relative;
+  width: clamp(6.25rem, 9vw, 8.5rem);
+  aspect-ratio: 1;
+  overflow: hidden;
+  transition: transform .8s cubic-bezier(.4, 0, .2, 1), opacity .6s ease;
+}
+
+.page-loader--leaving .page-loader__brand { opacity: .25; transform: translateY(-1rem) scale(.96); }
+.page-loader__logo { position: absolute; inset: 0; display: block; overflow: hidden; }
+.page-loader__logo img { width: 100%; height: 100%; object-fit: contain; transform: scale(1.9); }
+.page-loader__logo--ghost { opacity: .11; filter: grayscale(1); }
+.page-loader__logo--fill {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 76% 2%, 52% 0, 26% 2%, 0 0);
+  animation: loader-liquid-fill 1.45s cubic-bezier(.65, 0, .25, 1) .12s forwards;
+}
+
+.page-loader__liquid-edge {
+  position: absolute;
+  z-index: 2;
+  top: -14%;
+  left: 5%;
+  width: 90%;
+  height: 12%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, transparent, rgb(45 45 42 / 9%));
+  filter: blur(4px);
+  opacity: .7;
+  animation: loader-liquid-edge 1.45s cubic-bezier(.65, 0, .25, 1) .12s forwards;
+}
+
+@keyframes loader-liquid-fill {
+  0% { clip-path: polygon(0 0, 100% 0, 100% 0, 76% 2%, 52% 0, 26% 2%, 0 0); }
+  28% { clip-path: polygon(0 0, 100% 0, 100% 26%, 78% 29%, 52% 26%, 25% 30%, 0 27%); }
+  58% { clip-path: polygon(0 0, 100% 0, 100% 57%, 77% 61%, 52% 57%, 24% 60%, 0 58%); }
+  82% { clip-path: polygon(0 0, 100% 0, 100% 82%, 76% 85%, 50% 82%, 24% 86%, 0 83%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%, 50% 100%, 25% 100%, 0 100%); }
+}
+
+@keyframes loader-liquid-edge {
+  0% { top: -14%; opacity: 0; }
+  12% { opacity: .65; }
+  88% { opacity: .5; }
+  100% { top: 96%; opacity: 0; }
+}
 
 .eyebrow {
   margin: 0 0 var(--space-4);
