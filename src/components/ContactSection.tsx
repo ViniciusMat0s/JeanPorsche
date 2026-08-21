@@ -2,8 +2,11 @@ import { type FormEvent, useState } from 'react'
 import { AnimatedText } from './AnimatedText'
 import { LayoutContainer } from './LayoutContainer'
 
+type ContactChannel = 'email' | 'whatsapp'
+
 export function ContactSection() {
   const [message, setMessage] = useState('')
+  const [channel, setChannel] = useState<ContactChannel>('email')
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -11,8 +14,27 @@ export function ContactSection() {
     const name = String(form.get('nombre') ?? '').trim()
     const email = String(form.get('email') ?? '').trim()
     const project = String(form.get('proyecto') ?? '').trim()
-    const body = [`Nombre: ${name}`, `Email: ${email}`, '', project].join('\n')
-    setMessage('Se abrirá tu aplicación de correo para completar el envío.')
+    const body = [
+      'Hola, equipo de Jean Porsche.',
+      '',
+      `Mi nombre es ${name}.`,
+      `Mi email es ${email}.`,
+      '',
+      'Quisiera consultar sobre este proyecto:',
+      project,
+    ].join('\n')
+
+    if (channel === 'whatsapp') {
+      setMessage('Se abrirá WhatsApp con tu mensaje preparado.')
+      const whatsappLink = document.createElement('a')
+      whatsappLink.href = `https://wa.me/34919905285?text=${encodeURIComponent(body)}`
+      whatsappLink.target = '_blank'
+      whatsappLink.rel = 'noopener noreferrer'
+      whatsappLink.click()
+      return
+    }
+
+    setMessage('Se abrirá tu aplicación de correo con el mensaje preparado.')
     window.location.href = `mailto:info@xsche.es?subject=${encodeURIComponent(`Nueva consulta de ${name}`)}&body=${encodeURIComponent(body)}`
   }
 
@@ -30,6 +52,31 @@ export function ContactSection() {
         </div>
 
         <form className="contact-form" onSubmit={submit} data-reveal>
+          <fieldset className="contact-channel">
+            <legend>¿Cómo prefieres contactar?</legend>
+            <div className="contact-channel__options">
+              <label>
+                <input
+                  type="radio"
+                  name="canal"
+                  value="email"
+                  checked={channel === 'email'}
+                  onChange={() => setChannel('email')}
+                />
+                <span>Email</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="canal"
+                  value="whatsapp"
+                  checked={channel === 'whatsapp'}
+                  onChange={() => setChannel('whatsapp')}
+                />
+                <span>WhatsApp</span>
+              </label>
+            </div>
+          </fieldset>
           <div className="field">
             <label htmlFor="nombre">Nombre</label>
             <input id="nombre" name="nombre" autoComplete="name" required />
@@ -42,8 +89,13 @@ export function ContactSection() {
             <label htmlFor="proyecto">Háblanos de tu proyecto</label>
             <textarea id="proyecto" name="proyecto" rows={4} required />
           </div>
-          <button className="submit-button" type="submit"><span>Preparar correo</span><span aria-hidden="true">→</span></button>
-          <p className="form-note">Este formulario no almacena datos: prepara un correo en tu dispositivo.</p>
+          <button className="submit-button" type="submit">
+            <span>{channel === 'whatsapp' ? 'Abrir WhatsApp' : 'Preparar correo'}</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <p className="form-note">
+            Este formulario no almacena datos: prepara {channel === 'whatsapp' ? 'un mensaje en WhatsApp' : 'un correo en tu dispositivo'}.
+          </p>
           <p className="sr-only" aria-live="polite">{message}</p>
         </form>
       </LayoutContainer>
