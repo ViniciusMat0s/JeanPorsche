@@ -76,7 +76,7 @@ export function ContactSection() {
       'Hola, equipo de Jean Porsche.',
       '',
       `Mi nombre es ${name}.`,
-      `Mi email es ${email}.`,
+      ...(channel === 'email' ? [`Mi email es ${email}.`] : []),
       '',
       'Quisiera consultar sobre este proyecto:',
       project,
@@ -181,25 +181,39 @@ export function ContactSection() {
               </label>
             </div>
           </fieldset>
-          <div className="field">
-            <label htmlFor="nombre">Nombre</label>
-            <input id="nombre" name="nombre" autoComplete="name" required />
+          <div className={`contact-form__body contact-form__body--${channel}`}>
+            <div className="field">
+              <label htmlFor="nombre">Nombre</label>
+              <input id="nombre" name="nombre" autoComplete="name" required />
+            </div>
+            <div
+              className={`field contact-email-field ${channel === 'whatsapp' ? 'contact-email-field--hidden' : ''}`.trim()}
+              aria-hidden={channel === 'whatsapp'}
+            >
+              <div className="contact-email-field__inner">
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required={channel === 'email'}
+                  disabled={channel === 'whatsapp'}
+                />
+              </div>
+            </div>
+            <div className="field">
+              <label htmlFor="proyecto">Háblanos de tu proyecto</label>
+              <textarea id="proyecto" name="proyecto" rows={4} required />
+            </div>
+            <button className="submit-button" type="submit">
+              <span>{channel === 'whatsapp' ? 'Abrir WhatsApp' : 'Preparar correo'}</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <p className="form-note">
+              Este formulario no almacena datos: prepara {channel === 'whatsapp' ? 'un mensaje en WhatsApp' : 'un correo en tu dispositivo'}.
+            </p>
           </div>
-          <div className="field">
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" autoComplete="email" required />
-          </div>
-          <div className="field">
-            <label htmlFor="proyecto">Háblanos de tu proyecto</label>
-            <textarea id="proyecto" name="proyecto" rows={4} required />
-          </div>
-          <button className="submit-button" type="submit">
-            <span>{channel === 'whatsapp' ? 'Abrir WhatsApp' : 'Preparar correo'}</span>
-            <span aria-hidden="true">→</span>
-          </button>
-          <p className="form-note">
-            Este formulario no almacena datos: prepara {channel === 'whatsapp' ? 'un mensaje en WhatsApp' : 'un correo en tu dispositivo'}.
-          </p>
           <p className="sr-only" aria-live="polite">{message}</p>
         </form>
       </LayoutContainer>
