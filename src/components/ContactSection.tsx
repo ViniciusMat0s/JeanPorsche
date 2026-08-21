@@ -1,4 +1,5 @@
 import { type FormEvent, useState } from 'react'
+import { AnimatedText } from './AnimatedText'
 import { LayoutContainer } from './LayoutContainer'
 
 export function ContactSection() {
@@ -20,11 +21,7 @@ export function ContactSection() {
       <LayoutContainer className="contact-section__grid">
         <div className="contact-section__copy">
           <p className="eyebrow" data-reveal>Contacto</p>
-          <h2 id="contact-title" data-animated-text>
-            {['¿Imaginamos', 'juntos', 'tu', 'próximo', 'espacio?'].map((word) => (
-              <span className="word-mask" key={word}><span data-word>{word}&nbsp;</span></span>
-            ))}
-          </h2>
+          <AnimatedText id="contact-title" text="¿Imaginamos juntos tu próximo espacio?" />
           <p data-reveal>Cuéntanos el punto de partida. El estudio responderá directamente a tu consulta.</p>
           <div className="contact-addresses" data-reveal>
             <address><strong>Madrid</strong><span>Calle de Castelló 59<br />28001 Madrid</span></address>

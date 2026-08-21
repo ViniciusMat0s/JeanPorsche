@@ -1,4 +1,5 @@
 import { ArrowLink } from './ArrowLink'
+import { AnimatedText } from './AnimatedText'
 import { LayoutContainer } from './LayoutContainer'
 
 export function AboutSection() {
@@ -11,11 +12,7 @@ export function AboutSection() {
         </figure>
         <div className="about-section__copy">
           <p className="eyebrow" data-reveal>Jean Porsche</p>
-          <h2 id="about-title" data-animated-text>
-            {['Una', 'mirada', 'libre,', 'culta', 'y', 'emocional.'].map((word) => (
-              <span className="word-mask" key={word}><span data-word>{word}&nbsp;</span></span>
-            ))}
-          </h2>
+          <AnimatedText id="about-title" text="Una mirada libre, culta y emocional." />
           <p className="about-section__lead" data-reveal>
             La mezcla de referencias, la intensidad cromática y el cuidado por los detalles convierten
             cada interior en una escena propia, lejos de fórmulas repetidas.

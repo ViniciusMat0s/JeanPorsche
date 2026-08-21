@@ -12,7 +12,7 @@ export function useGsapPage(root: RefObject<HTMLElement | null>) {
 
     const context = gsap.context(() => {
       if (reducedMotion) {
-        gsap.set('[data-reveal], [data-word], [data-image-inner]', {
+        gsap.set('[data-reveal], [data-letter], [data-image-inner]', {
           clearProps: 'all',
           opacity: 1,
           transform: 'none',
@@ -41,20 +41,26 @@ export function useGsapPage(root: RefObject<HTMLElement | null>) {
       })
 
       gsap.utils.toArray<HTMLElement>('[data-animated-text]').forEach((element) => {
-        const words = element.querySelectorAll('[data-word]')
-        gsap.from(words, {
-            yPercent: 115,
+        const letters = element.querySelectorAll('[data-letter]')
+        gsap.fromTo(
+          letters,
+          {
+            x: (index) => 48 + Math.min(index * 1.8, 90),
             opacity: 0,
-            duration: 0.9,
-            stagger: 0.045,
-            ease: 'power3.out',
-            immediateRender: false,
+          },
+          {
+            x: 0,
+            opacity: 1,
+            stagger: 0.035,
+            ease: 'none',
             scrollTrigger: {
               trigger: element,
-              start: 'top 82%',
-              once: true,
+              start: 'top 92%',
+              end: 'top 38%',
+              scrub: 0.65,
             },
-          })
+          },
+        )
       })
 
       gsap.utils.toArray<HTMLElement>('[data-image-reveal]').forEach((element) => {

@@ -24,6 +24,20 @@ const path = require('path')
 
   const desktop = await browser.newPage({ viewport: { width: 1440, height: 1000 } })
   await desktop.goto('http://127.0.0.1:4173/', { waitUntil: 'networkidle' })
+  const introTop = await desktop.locator('#intro-title').evaluate((element) => element.getBoundingClientRect().top + scrollY)
+  await desktop.evaluate((top) => scrollTo(0, top - innerHeight * .68), introTop)
+  await desktop.waitForTimeout(800)
+  const midLetterState = await desktop.locator('#intro-title [data-letter]').evaluateAll((letters) => {
+    const visible = letters.filter((letter) => Number(getComputedStyle(letter).opacity) > .9).length
+    const hidden = letters.filter((letter) => Number(getComputedStyle(letter).opacity) < .1).length
+    return { total: letters.length, visible, hidden }
+  })
+  await desktop.evaluate((top) => scrollTo(0, top - innerHeight * .25), introTop)
+  await desktop.waitForTimeout(900)
+  const completedLetterState = await desktop.locator('#intro-title [data-letter]').evaluateAll((letters) => ({
+    allVisible: letters.every((letter) => Number(getComputedStyle(letter).opacity) > .98),
+    allJoined: letters.every((letter) => getComputedStyle(letter).transform === 'matrix(1, 0, 0, 1, 0, 0)' || getComputedStyle(letter).transform === 'none'),
+  }))
   await desktop.locator('.services-section').scrollIntoViewIfNeeded()
   await desktop.waitForTimeout(1400)
   const servicesVisible = await desktop.locator('.services-section [data-reveal]').evaluateAll((elements) =>
@@ -50,6 +64,8 @@ const path = require('path')
     menuVisible: menuVisible === 'visible',
     focusedOnOpen,
     menuClosedWithEscape: menuClosed === 'false',
+    letterByLetterAtMidScroll: midLetterState,
+    lettersCompleteAfterScroll: completedLetterState,
     servicesVisibleAfterScroll: servicesVisible,
     projectVisibleAfterScroll: firstProjectVisible,
     imagesLoaded,

@@ -83,8 +83,9 @@ button { color: inherit; }
   text-transform: uppercase;
 }
 
-.word-mask { display: inline-block; overflow: hidden; vertical-align: bottom; }
-.word-mask > span { display: inline-block; }
+.letter-word { display: inline-flex; margin-right: .22em; white-space: nowrap; vertical-align: baseline; }
+.letter-word:last-child { margin-right: 0; }
+.letter { display: inline-block; will-change: transform, opacity; }
 
 .arrow-link {
   display: inline-flex;
@@ -412,5 +413,5 @@ button { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  [data-reveal], [data-word], [data-image-inner] { opacity: 1 !important; transform: none !important; }
+  [data-reveal], [data-letter], [data-image-inner] { opacity: 1 !important; transform: none !important; }
 }

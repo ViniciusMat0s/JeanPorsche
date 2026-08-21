@@ -1,4 +1,5 @@
 import { ArrowLink } from './ArrowLink'
+import { AnimatedText } from './AnimatedText'
 import { LayoutContainer } from './LayoutContainer'
 import { ScrollReveal } from './ScrollReveal'
 
@@ -8,11 +9,7 @@ export function IntroSection() {
       <LayoutContainer className="intro-section__grid">
         <div className="intro-section__copy">
           <p className="eyebrow" data-reveal>El estudio</p>
-          <h2 id="intro-title" data-animated-text>
-            {['Espacios', 'con', 'carácter,', 'pensados', 'para', 'ser', 'vividos.'].map((word) => (
-              <span className="word-mask" key={word}><span data-word>{word}&nbsp;</span></span>
-            ))}
-          </h2>
+          <AnimatedText id="intro-title" text="Espacios con carácter, pensados para ser vividos." />
           <ScrollReveal>
             <p className="intro-section__lead">
               Jean Porsche Arquitectura + Interiores crea proyectos donde color, arte, luz y materiales

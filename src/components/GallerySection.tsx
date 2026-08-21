@@ -1,4 +1,5 @@
 import { gallery } from '../data/site'
+import { AnimatedText } from './AnimatedText'
 import { LayoutContainer } from './LayoutContainer'
 
 export function GallerySection() {
@@ -7,11 +8,7 @@ export function GallerySection() {
       <LayoutContainer>
         <header className="gallery-section__header">
           <p className="eyebrow" data-reveal>Atmósferas</p>
-          <h2 id="gallery-title" data-animated-text>
-            {['El', 'espacio', 'también', 'se', 'recuerda', 'por', 'cómo', 'nos', 'hace', 'sentir.'].map((word) => (
-              <span className="word-mask" key={word}><span data-word>{word}&nbsp;</span></span>
-            ))}
-          </h2>
+          <AnimatedText id="gallery-title" text="El espacio también se recuerda por cómo nos hace sentir." />
         </header>
         <div className="gallery-grid">
           {gallery.map((item, index) => (
