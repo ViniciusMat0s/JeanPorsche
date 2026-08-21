@@ -270,6 +270,36 @@ button { color: inherit; }
 .hero__content { position: relative; z-index: 1; padding-top: 9rem; padding-bottom: clamp(3rem, 7vh, 6rem); }
 .hero h1 { margin: 0; max-width: 12.5ch; font-family: var(--display); font-size: clamp(4rem, 9.5vw, 9.8rem); font-weight: 400; letter-spacing: -.052em; line-height: .82; text-wrap: balance; }
 .hero__bottom { display: flex; justify-content: flex-end; align-items: end; gap: var(--space-4); margin-top: var(--space-5); }
+.hero__cta-liquid { position: relative; isolation: isolate; overflow: hidden; transition: color .28s ease, border-color .28s ease; }
+.hero__cta-liquid > span { position: relative; z-index: 2; }
+.hero__cta-liquid::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: -32% auto -32% -22%;
+  width: 126%;
+  border-radius: 0 54% 46% 0 / 0 42% 58% 0;
+  background: var(--sun);
+  transform: translateX(-104%) rotate(-2deg);
+  transition: transform .72s cubic-bezier(.72, 0, .18, 1);
+}
+.hero__cta-liquid::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: -34%;
+  width: 35%;
+  aspect-ratio: 1;
+  border-radius: 44% 56% 63% 37% / 55% 42% 58% 45%;
+  background: var(--sun);
+  opacity: .86;
+  transform: translate(-60%, -50%) rotate(0deg);
+  transition: transform .8s cubic-bezier(.7, 0, .16, 1);
+}
+.hero__cta-liquid:is(:hover, :focus-visible) { background: transparent; color: var(--ink); }
+.hero__cta-liquid:is(:hover, :focus-visible)::before { transform: translateX(0) rotate(0deg); }
+.hero__cta-liquid:is(:hover, :focus-visible)::after { transform: translate(390%, -50%) rotate(170deg); }
 .hero__scroll { position: absolute; z-index: 2; right: 1.1rem; bottom: 2.1rem; display: flex; align-items: center; gap: .7rem; writing-mode: vertical-rl; font-size: .62rem; letter-spacing: .15em; text-transform: uppercase; }
 .hero__scroll i { display: block; width: 1px; height: 2.75rem; background: currentColor; }
 
