@@ -23,6 +23,8 @@ export function CategoryPage() {
     document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', description)
     document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.setAttribute('content', title)
     document.querySelector<HTMLMetaElement>('meta[property="og:description"]')?.setAttribute('content', description)
+    document.querySelector<HTMLMetaElement>('meta[property="og:url"]')?.setAttribute('content', `https://www.xsche.es/${category.slug}/`)
+    document.querySelector<HTMLMetaElement>('meta[property="og:image"]')?.setAttribute('content', `https://www.xsche.es${category.hero}`)
     document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', `https://www.xsche.es/${category.slug}/`)
   }, [category])
 

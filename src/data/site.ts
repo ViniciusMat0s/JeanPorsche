@@ -73,7 +73,7 @@ export const projects: Project[] = [
     category: 'Residencial',
     image: '/images/casa-ve-hero.jpg',
     alt: 'Comedor de Casa V+E en Madrid, diseñado por Jean Porsche',
-    href: 'https://www.xsche.es/casa-ve',
+    href: '/proyectos/casa-ve/',
     tone: 'cream',
   },
   {
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     category: 'Restaurante',
     image: '/images/baoli.jpg',
     alt: 'Interior rojo y dorado del restaurante Baoli en Madrid',
-    href: 'https://www.xsche.es/baoli',
+    href: '/proyectos/baoli/',
     tone: 'coral',
   },
   {
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     category: 'Residencial',
     image: '/images/casa-bb-menorca.jpg',
     alt: 'Comedor colorido de Casa BB en Menorca',
-    href: 'https://www.xsche.es/casa-bb-menorca',
+    href: '/proyectos/casa-bb-menorca/',
     tone: 'sun',
   },
   {
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     category: 'Restaurante',
     image: '/images/coque.jpg',
     alt: 'Salón del restaurante Coque diseñado por Jean Porsche',
-    href: 'https://www.xsche.es/coque',
+    href: '/proyectos/coque/',
     tone: 'blue',
   },
   {
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     category: 'Casa Decor',
     image: '/images/gabinete-visconti.jpg',
     alt: 'Gabinete Visconti para la Embajada de Italia',
-    href: 'https://www.xsche.es/gabinete-visconti',
+    href: '/proyectos/gabinete-visconti/',
     tone: 'cream',
   },
   {
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     category: 'Casa Decor',
     image: '/images/toujours-madrid.jpg',
     alt: 'Cocina y comedor del proyecto Toujours à Madrid',
-    href: 'https://www.xsche.es/toujours-a-madrid',
+    href: '/proyectos/toujours-a-madrid/',
     tone: 'coral',
   },
 ]

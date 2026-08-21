@@ -20,4 +20,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://www.xsche.es/proyectos/casa-ve/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.xsche.es/proyectos/baoli/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.xsche.es/proyectos/casa-bb-menorca/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.xsche.es/proyectos/coque/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.xsche.es/proyectos/gabinete-visconti/</loc><priority>0.7</priority></url>
+  <url><loc>https://www.xsche.es/proyectos/toujours-a-madrid/</loc><priority>0.7</priority></url>
 </urlset>

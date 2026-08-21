@@ -30,6 +30,6 @@ npm run preview
 ## Notas de integração
 
 - As categorias `/residencial`, `/restaurantes` e `/casa-decor` possuem páginas internas e entradas HTML próprias no build de produção.
-- Os cards de projetos da homepage ainda apontam para os detalhes públicos existentes até que as páginas individuais sejam migradas.
+- Os seis projetos destacados da homepage possuem páginas internas em `/proyectos/:slug/`, galerias próprias e entradas HTML individuais no build.
 - O formulário prepara um e-mail para `info@xsche.es` e não armazena dados. A integração com backend/CRM deve ser definida antes da publicação definitiva.
 - URLs canônicas, Open Graph e schema usam o domínio público atual; devem acompanhar a estratégia final de implantação caso o domínio mude.

@@ -82,16 +82,20 @@ export function useGsapPage(root: RefObject<HTMLElement | null>) {
         )
       })
 
-      gsap.to('[data-marquee-track]', {
-        xPercent: -18,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '[data-marquee]',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 0.6,
-        },
-      })
+      const marquee = root.current?.querySelector('[data-marquee]')
+      const marqueeTrack = root.current?.querySelector('[data-marquee-track]')
+      if (marquee && marqueeTrack) {
+        gsap.to(marqueeTrack, {
+          xPercent: -18,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: marquee,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.6,
+          },
+        })
+      }
 
       gsap.utils.toArray<HTMLElement>('[data-project-card]').forEach((card, index) => {
         gsap.from(card, {
