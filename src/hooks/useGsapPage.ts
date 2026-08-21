@@ -27,14 +27,14 @@ export function useGsapPage(root: RefObject<HTMLElement | null>) {
 
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((element) => {
         gsap.from(element, {
-            y: 52,
-            opacity: 0,
-            duration: 1.05,
-            ease: 'power3.out',
+            y: 20,
+            opacity: 0.68,
+            duration: 1.35,
+            ease: 'power2.out',
             immediateRender: false,
             scrollTrigger: {
               trigger: element,
-              start: 'top 84%',
+              start: 'top 88%',
               once: true,
             },
           })
@@ -95,14 +95,14 @@ export function useGsapPage(root: RefObject<HTMLElement | null>) {
 
       gsap.utils.toArray<HTMLElement>('[data-project-card]').forEach((card, index) => {
         gsap.from(card, {
-            y: index % 2 === 0 ? 80 : 140,
-            opacity: 0,
-            duration: 1.15,
-            ease: 'power3.out',
+            y: index % 2 === 0 ? 26 : 38,
+            opacity: 0.72,
+            duration: 1.45,
+            ease: 'power2.out',
             immediateRender: false,
             scrollTrigger: {
               trigger: card,
-              start: 'top 86%',
+              start: 'top 89%',
               once: true,
             },
           })
