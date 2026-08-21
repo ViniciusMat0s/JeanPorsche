@@ -14,7 +14,7 @@ export function ProjectsSection() {
           />
         </div>
         <div className="projects-grid">
-          {projects.map((project, index) => <ProjectCard key={project.title} project={project} index={index} />)}
+          {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
         </div>
       </LayoutContainer>
     </section>

@@ -12,7 +12,6 @@ export function ProcessSection() {
         <ol className="principles-list">
           {principles.map((principle) => (
             <li key={principle.index} data-reveal>
-              <span>{principle.index}</span>
               <div><h3>{principle.title}</h3><p>{principle.text}</p></div>
             </li>
           ))}
