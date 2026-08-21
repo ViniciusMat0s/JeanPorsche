@@ -4,6 +4,12 @@ import { LayoutContainer } from './LayoutContainer'
 
 type ContactChannel = 'email' | 'whatsapp'
 
+const fieldLimits = {
+  name: 80,
+  email: 254,
+  project: 1500,
+} as const
+
 const studios = [
   {
     city: 'Madrid',
@@ -72,6 +78,17 @@ export function ContactSection() {
     const name = String(form.get('nombre') ?? '').trim()
     const email = String(form.get('email') ?? '').trim()
     const project = String(form.get('proyecto') ?? '').trim()
+
+    if (!name || name.length > fieldLimits.name || !project || project.length > fieldLimits.project) {
+      setMessage('Revisa la longitud de los campos antes de continuar.')
+      return
+    }
+
+    if (channel === 'email' && (!email || email.length > fieldLimits.email)) {
+      setMessage('Introduce una dirección de correo válida.')
+      return
+    }
+
     const body = [
       'Hola, equipo de Jean Porsche.',
       '',
@@ -146,8 +163,9 @@ export function ContactSection() {
                 <iframe
                   title={`Vista previa del mapa de ${activeStudio.city}`}
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(activeStudio.query)}&z=16&output=embed`}
-                  loading="eager"
-                  referrerPolicy="no-referrer-when-downgrade"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  sandbox="allow-scripts allow-same-origin"
                   tabIndex={-1}
                 />
               ) : null}
@@ -184,7 +202,7 @@ export function ContactSection() {
           <div className={`contact-form__body contact-form__body--${channel}`}>
             <div className="field">
               <label htmlFor="nombre">Nombre</label>
-              <input id="nombre" name="nombre" autoComplete="name" required />
+              <input id="nombre" name="nombre" autoComplete="name" maxLength={fieldLimits.name} required />
             </div>
             <div
               className={`field contact-email-field ${channel === 'whatsapp' ? 'contact-email-field--hidden' : ''}`.trim()}
@@ -197,6 +215,7 @@ export function ContactSection() {
                   name="email"
                   type="email"
                   autoComplete="email"
+                  maxLength={fieldLimits.email}
                   required={channel === 'email'}
                   disabled={channel === 'whatsapp'}
                 />
@@ -204,14 +223,14 @@ export function ContactSection() {
             </div>
             <div className="field">
               <label htmlFor="proyecto">Háblanos de tu proyecto</label>
-              <textarea id="proyecto" name="proyecto" rows={4} required />
+              <textarea id="proyecto" name="proyecto" rows={4} maxLength={fieldLimits.project} required />
             </div>
             <button className="submit-button" type="submit">
               <span>{channel === 'whatsapp' ? 'Abrir WhatsApp' : 'Preparar correo'}</span>
               <span aria-hidden="true">→</span>
             </button>
             <p className="form-note">
-              Este formulario no almacena datos: prepara {channel === 'whatsapp' ? 'un mensaje en WhatsApp' : 'un correo en tu dispositivo'}.
+              Este sitio no almacena tus datos. La información se prepara para enviarla mediante {channel === 'whatsapp' ? 'WhatsApp' : 'el cliente de correo de tu dispositivo'}.
             </p>
           </div>
           <p className="sr-only" aria-live="polite">{message}</p>

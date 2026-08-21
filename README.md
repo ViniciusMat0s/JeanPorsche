@@ -12,10 +12,17 @@ npm run dev
 Validação de produção:
 
 ```bash
+npm ci
 npm run lint
+npm run typecheck
 npm run build
+npm run check:security
+npm run check:seo
+npm audit --omit=dev
 npm run preview
 ```
+
+Publish only the `dist` directory. CSP, HTTP headers, HSTS, image hardening and provider-specific deployment guidance are documented in [`SECURITY.md`](SECURITY.md).
 
 ## Estrutura
 

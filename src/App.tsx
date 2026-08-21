@@ -10,7 +10,17 @@ function RouteEffects() {
 
   useEffect(() => {
     if (location.hash) {
-      window.requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView())
+      let fragmentId = ''
+
+      try {
+        fragmentId = decodeURIComponent(location.hash.slice(1))
+      } catch {
+        fragmentId = ''
+      }
+
+      if (fragmentId) {
+        window.requestAnimationFrame(() => document.getElementById(fragmentId)?.scrollIntoView())
+      }
       return
     }
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })

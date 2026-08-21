@@ -6,6 +6,7 @@ export default defineConfig({
   build: {
     target: 'es2022',
     cssCodeSplit: true,
+    sourcemap: false,
     rollupOptions: {
       input: {
         main: 'index.html',
