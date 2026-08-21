@@ -54,7 +54,6 @@ export function ProjectPage() {
             {project.gallery.map((item, index) => (
               <figure className={`project-gallery__item project-gallery__item--${index + 1}`} key={item.image} data-image-reveal data-reveal>
                 <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} data-image-inner />
-                <figcaption>{String(index + 1).padStart(2, '0')} / {String(project.gallery.length).padStart(2, '0')}</figcaption>
               </figure>
             ))}
           </div>
