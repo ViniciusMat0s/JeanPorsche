@@ -8,10 +8,8 @@ export function Hero() {
       </div>
       <div className="hero__overlay" />
       <div className="hero__content container">
-        <p className="hero__eyebrow" data-hero-reveal>Madrid · Menorca</p>
         <h1 id="hero-title" data-hero-reveal>Cuando el estilo<br />tiene nombre propio</h1>
         <div className="hero__bottom" data-hero-reveal>
-          <p>Arquitectura + Interiores</p>
           <CTA href="#proyectos" inverse>Descubrir proyectos</CTA>
         </div>
       </div>

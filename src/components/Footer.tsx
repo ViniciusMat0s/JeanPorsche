@@ -8,9 +8,7 @@ export function Footer() {
         <div className="site-footer__top">
           <div className="site-footer__brand">
             <span>Jean Porsche</span>
-            <small>Arquitectura + Interiores</small>
           </div>
-          <img src="/images/logo-ad100.png" alt="AD100" loading="lazy" />
         </div>
         <div className="site-footer__grid">
           <nav aria-label="Navegación del pie">
@@ -28,7 +26,6 @@ export function Footer() {
         </div>
         <div className="site-footer__bottom">
           <span>© {new Date().getFullYear()} Jean Porsche</span>
-          <span>Madrid · Menorca</span>
           <a href="#inicio">Volver arriba ↑</a>
         </div>
       </LayoutContainer>

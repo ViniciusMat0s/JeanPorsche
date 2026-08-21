@@ -54,7 +54,6 @@ export function Header() {
       <a className="wordmark" href="/#inicio" aria-label="Jean Porsche, volver al inicio">
         <span className="wordmark__text" aria-hidden="true">
           <span className="wordmark__name">Jean Porsche</span>
-          <small>Arquitectura + Interiores</small>
         </span>
         <span className="wordmark__image" aria-hidden="true">
           <img src="/images/logo.png" alt="" />
