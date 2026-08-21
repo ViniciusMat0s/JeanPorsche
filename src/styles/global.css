@@ -509,6 +509,19 @@ button { color: inherit; }
 .project-navigation small { font-size: .68rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
 .project-navigation span { max-width: 10ch; font-family: var(--display); font-size: clamp(2.8rem, 5.5vw, 6rem); letter-spacing: -.04em; line-height: .9; }
 
+/* 404 */
+.not-found-hero { min-height: 100svh; background: var(--ink); }
+.not-found-hero .hero__media img { filter: saturate(.72) contrast(1.04); }
+.not-found-hero__wash { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgb(26 43 62 / 94%) 0%, rgb(40 74 109 / 78%) 52%, rgb(30 28 25 / 53%) 100%); }
+.not-found-hero__code { position: absolute; z-index: 1; right: -1vw; bottom: -7vw; color: transparent; font-family: var(--display); font-size: clamp(16rem, 39vw, 39rem); letter-spacing: -.08em; line-height: .7; opacity: .2; -webkit-text-stroke: 2px var(--sun); pointer-events: none; }
+.not-found-hero__content { position: relative; z-index: 2; width: 100%; padding-top: 10rem; padding-bottom: clamp(3rem, 8vh, 6.5rem); }
+.not-found-hero__eyebrow { margin: 0 0 var(--space-3); font-size: .7rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+.not-found-hero h1 { max-width: 9ch; margin: 0; font-family: var(--display); font-size: clamp(4.5rem, 9vw, 9.5rem); font-weight: 400; letter-spacing: -.055em; line-height: .84; text-wrap: balance; }
+.not-found-hero__intro { max-width: 35rem; margin: var(--space-4) 0 0; font-size: clamp(1rem, 1.3vw, 1.25rem); }
+.not-found-hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin-top: var(--space-4); }
+.not-found-hero .cta { min-width: 13rem; }
+.not-found-hero .arrow-link { padding-inline: .5rem; }
+
 @media (max-width: 68.75rem) {
   :root { --space-7: 7rem; }
   .desktop-nav { gap: 1.3rem; }
@@ -555,6 +568,7 @@ button { color: inherit; }
   .project-hero__content, .project-overview__grid { grid-template-columns: 1fr 3fr; }
   .project-hero h1, .project-overview h2, .project-overview__grid > p { grid-column: 2; }
   .project-gallery__grid { gap: var(--space-5) var(--space-3); }
+  .not-found-hero__code { right: -5vw; bottom: -3vw; }
 }
 
 @media (max-width: 37.5rem) {
@@ -630,6 +644,12 @@ button { color: inherit; }
   .project-navigation { grid-template-columns: 1fr; }
   .project-navigation a { min-height: 13rem; }
   .project-navigation a + a { border-top: 1px solid rgb(255 255 255 / 28%); border-left: 0; }
+  .not-found-hero__wash { background: linear-gradient(180deg, rgb(24 42 61 / 91%), rgb(35 67 99 / 78%) 62%, rgb(29 27 25 / 67%)); }
+  .not-found-hero__code { right: -10vw; bottom: 5vw; font-size: 62vw; opacity: .16; }
+  .not-found-hero h1 { font-size: clamp(4rem, 19vw, 6rem); }
+  .not-found-hero__intro { max-width: 28rem; }
+  .not-found-hero__actions { align-items: stretch; flex-direction: column; }
+  .not-found-hero__actions .cta, .not-found-hero__actions .arrow-link { width: 100%; justify-content: space-between; }
 }
 
 @media (hover: none) {

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { AnimatedText } from '../components/AnimatedText'
 import { ContactSection } from '../components/ContactSection'
 import { Footer } from '../components/Footer'
@@ -7,6 +7,7 @@ import { Header } from '../components/Header'
 import { LayoutContainer } from '../components/LayoutContainer'
 import { projectDetailBySlug, projectDetails } from '../data/projectDetails'
 import { useGsapPage } from '../hooks/useGsapPage'
+import { NotFoundPage } from './NotFoundPage'
 
 export function ProjectPage() {
   const { slug = '' } = useParams()
@@ -27,7 +28,7 @@ export function ProjectPage() {
     document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', canonical)
   }, [project])
 
-  if (!project) return <Navigate to="/" replace />
+  if (!project) return <NotFoundPage />
 
   const projectIndex = projectDetails.findIndex((item) => item.slug === project.slug)
   const previous = projectDetails[(projectIndex - 1 + projectDetails.length) % projectDetails.length]

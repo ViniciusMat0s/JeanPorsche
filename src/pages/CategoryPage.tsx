@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { AnimatedText } from '../components/AnimatedText'
 import { CategoryProjectCard } from '../components/CategoryProjectCard'
 import { ContactSection } from '../components/ContactSection'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { LayoutContainer } from '../components/LayoutContainer'
+import { NotFoundPage } from './NotFoundPage'
 import { categories, categoryBySlug } from '../data/categories'
 import { useGsapPage } from '../hooks/useGsapPage'
 
@@ -28,7 +29,7 @@ export function CategoryPage() {
     document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', `https://www.xsche.es/${category.slug}/`)
   }, [category])
 
-  if (!category) return <Navigate to="/" replace />
+  if (!category) return <NotFoundPage />
 
   const otherCategories = categories.filter((item) => item.slug !== category.slug)
 
